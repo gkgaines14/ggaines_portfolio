@@ -1,0 +1,14 @@
+{
+  "name": "ggaines_portfolio",
+  "version": "1.0.0",
+  "description": "Web Dev Portfolio Site for Greg Gaines",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css --recursive"
+  },
+  "author": "Greg Gaines",
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^9.0.0"
+  }
+}

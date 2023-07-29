@@ -1,0 +1,43 @@
+.container {
+  max-width: $website-width;
+  margin: auto;
+  overflow: hidden;
+  // padding: 0 2rem;
+}
+
+.section {
+  width: 100%;
+  margin: 5rem 0 1rem 0;
+}
+
+.pad-2 {
+  padding: 2rem;
+}
+.pad-3 {
+  padding: 3rem;
+}
+.pad-4 {
+  padding: 4rem;
+}
+
+.heading {
+  font-size: 2.2rem;
+  letter-spacing: 4px;
+}
+
+.center-middle {
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.label {
+  font-size: 1.6rem;
+  letter-spacing: 2px;
+  font-weight: 700;
+  padding: 0.5rem;
+}
+
+.underscore {
+}
