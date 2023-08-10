@@ -20,6 +20,16 @@
   padding: 4rem;
 }
 
+.py-2 {
+  padding: 2rem 0;
+}
+.py-3 {
+  padding: 3rem 0;
+}
+.py-4 {
+  padding: 4rem 0;
+}
+
 .heading {
   font-size: 2.2rem;
   letter-spacing: 4px;
@@ -32,6 +42,12 @@
   justify-content: center;
 }
 
+.flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
 .label {
   font-size: 1.6rem;
   letter-spacing: 2px;
@@ -40,4 +56,27 @@
 }
 
 .underscore {
+}
+
+%btn-all {
+  width: 160px;
+  height: 50px;
+  padding: 0.8rem 1.4rem;
+  transition: 0.5s;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+}
+
+.btn {
+  &-light {
+    @extend %btn-all;
+    background: #2a7a4a;
+    color: white;
+
+    &:hover {
+      background: #28af60;
+    }
+  }
 }

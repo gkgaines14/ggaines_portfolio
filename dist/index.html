@@ -16,7 +16,7 @@
     />
     <title>Web Dev Portfolio | Greg Gaines</title>
   </head>
-  <body id="body">
+  <body id="home">
     <!-- Header -->
     <header id="header">
       <nav id="navbar">
@@ -24,25 +24,22 @@
           <img src="./img/gg_logo.png" alt="GG logo" class="logo" />
         </div>
         <div class="right-nav">
-          <div class="theme-controller">
-            <div class="light-switch">Light</div>
-            <div class="dark-switch">Dark</div>
-          </div>
+          <div id="theme-switch">LIGHT THEME</div>
           <ul>
-            <li class="current">HOME</li>
-            <li>ABOUT</li>
-            <li>WORK</li>
-            <li>CONTACT</li>
+            <li class="current"><a href="index.html">HOME</a></li>
+            <li><a href="about.html">ABOUT</a></li>
+            <li><a href="work.html">WORK</a></li>
+            <li><a href="work.html">CONTACT</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
+    <!-- Section: Landing Page Content -->
     <section id="home-landing">
-      <!-- Section A: Landing Page Content -->
       <div class="container">
         <div id="landing-content">
-          <div id="intro-message" class="pad-2">
+          <div id="intro-message" class="py-2">
             <div class="heading label-box">
               Welcome to the digital development world of
             </div>
@@ -53,6 +50,10 @@
               perferendis nisi alias dolore exercitationem ipsa, doloribus aut
               quae ut. In voluptates sapiente aliquam.
             </p>
+            <div id="learn-more" class="btn-light flex-between">
+              Learn More
+              <i class="fa-solid fa-down-long fa-1x"></i>
+            </div>
           </div>
           <div id="headshot-card">
             <div class="test">
@@ -65,10 +66,17 @@
       </div>
     </section>
 
-    <!-- Section B: My Specializations-->
+    <!-- Section: My Specializations-->
     <section id="home-special">
-      <div class="container pad-2">
+      <div class="container py-2">
         <div class="heading">I Specialize In</div>
+        <div class="py-2">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus
+          fuga et animi inventore est ducimus iure, quam perspiciatis velit,
+          quia impedit. Optio minima, ut nobis cumque dolore libero aspernatur
+          laborum accusantium nisi, culpa corrupti ad quod, aliquam
+          necessitatibus? Ducimus, quasi!
+        </div>
         <div id="specials">
           <div class="spec-item">
             <div class="center-middle icon-frame">
@@ -127,20 +135,48 @@
             </div>
           </div>
         </div>
+        <a href="work.html" class="btn-light"> My Portfolio</a>
+      </div>
+    </section>
+
+    <section id="home-approach">
+      <div class="container py-2">
+        <div class="heading">My Approach</div>
+
+        <p class="py-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum
+          molestiae obcaecati quos neque esse natus accusamus accusantium culpa,
+          vero quae, atque beatae sequi praesentium, odit quam consectetur
+          necessitatibus illo placeat. Voluptates exercitationem reprehenderit
+          deserunt explicabo atque incidunt tempore quas ullam aut possimus
+          neque aspernatur natus, reiciendis perferendis necessitatibus iste
+          fugit.
+        </p>
       </div>
     </section>
 
     <!-- Footer -->
 
     <section id="footer">
-      <div class="footer-content container">
+      <div class="footer-content container flex-between py-2">
         <p>Copyright &copy; 2023. All Rights Reserved</p>
-        <div class="socials">
-          <p>Instagram</p>
-          <p>LinkedIn</p>
+
+        <div class="socials flex-between">
+          <p>Connect with me:</p>
+          <div class="social-icons flex-between">
+            <a href="https://github.com/gkgaines14" target="_blank"
+              ><i class="fa-brands fa-github fa-2x"></i
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/greg-gaines-22009295"
+              target="_blank"
+            >
+              <i class="fa-brands fa-linkedin fa-2x"></i>
+            </a>
+          </div>
         </div>
       </div>
     </section>
-    <script src="app.js"></script>
+    <script src="./js/app.js" type="module"></script>
   </body>
 </html>
