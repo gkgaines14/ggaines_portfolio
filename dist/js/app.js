@@ -24,6 +24,30 @@ const launchHome = (page) => {
   });
 };
 
+//Home Script
+const launchAbout = (page) => {
+  window.onload = () => {
+    if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'dark');
+    }
+    setTheme(localStorage.getItem('theme'));
+    loadListeners();
+    console.log('About page loaded');
+  };
+
+  const header = document.querySelector('#header');
+  const learnMore = document.querySelector('#learn-more');
+
+  //Learn More button scroll
+  learnMore.addEventListener('click', () => {
+    window.scroll({
+      top: 803,
+      left: 0,
+      behavior: 'smooth',
+    });
+  });
+};
+
 // Work Page Script
 
 const launchWork = (page) => {
@@ -55,6 +79,11 @@ const launchWork = (page) => {
     codeProjects.forEach((item) => {
       item.style.display = 'inline';
     });
+
+    allTab.className = 'tab active-tab';
+    sitesTab.className = 'tab';
+    appsTab.className = 'tab';
+    codeTab.className = 'tab';
   });
 
   sitesTab.addEventListener('click', () => {
@@ -67,6 +96,11 @@ const launchWork = (page) => {
     codeProjects.forEach((item) => {
       item.style.display = 'none';
     });
+
+    allTab.className = 'tab';
+    sitesTab.className = 'tab active-tab';
+    appsTab.className = 'tab';
+    codeTab.className = 'tab';
   });
 
   appsTab.addEventListener('click', () => {
@@ -79,6 +113,11 @@ const launchWork = (page) => {
     codeProjects.forEach((item) => {
       item.style.display = 'none';
     });
+
+    allTab.className = 'tab';
+    sitesTab.className = 'tab';
+    appsTab.className = 'tab  active-tab';
+    codeTab.className = 'tab';
   });
 
   codeTab.addEventListener('click', () => {
@@ -91,6 +130,11 @@ const launchWork = (page) => {
     codeProjects.forEach((item) => {
       item.style.display = 'inline';
     });
+
+    allTab.className = 'tab';
+    sitesTab.className = 'tab';
+    appsTab.className = 'tab';
+    codeTab.className = 'tab active-tab';
   });
 };
 
@@ -107,6 +151,10 @@ const pageManager = {
       case 'work':
         console.log(page);
         launchWork(page);
+        break;
+      case 'about':
+        console.log(page);
+        launchAbout(page);
         break;
       default:
       // launchHome(page);

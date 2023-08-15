@@ -3,9 +3,10 @@ export const setTheme = (themeSetting) => {
   const themeButton = document.querySelector('#theme-switch');
 
   if (themeSetting === 'dark') {
-    //Set Dark
+    //Set to Dark
     document.documentElement.style.setProperty('--color-text', 'white');
     document.documentElement.style.setProperty('--color-background', '#131931');
+    document.documentElement.style.setProperty('--tab-color', '#191d2d');
     document.querySelector('.logo-back').style.backgroundColor = '#131830';
     document.querySelector('.logo-back').style.boxShadow =
       '0 0 8px 1px var(--color-accent-medium)';
@@ -14,12 +15,14 @@ export const setTheme = (themeSetting) => {
     themeButton.style.opacity = '0.8';
     themeButton.innerText = 'LIGHT THEME';
   } else {
-    //Set Light
+    //Set to Light
     document.documentElement.style.setProperty('--color-text', '#131931');
     document.documentElement.style.setProperty(
       '--color-background',
-      'var(--gray-1)'
+      'var(--gray-0)'
     );
+    document.documentElement.style.setProperty('--tab-color', '#1f2952');
+
     document.querySelector('.logo-back').style.backgroundColor =
       'var(--color-accent-light)';
     document.querySelector('.logo-back').style.boxShadow =

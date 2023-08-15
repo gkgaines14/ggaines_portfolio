@@ -77,8 +77,11 @@
   --gray-2: #b2becd;
   --gray-3: #6c7983;
   --gray-4: #454e56;
+  --test-s: #6262629d;
   --gray-5: #2a2e35;
-  --gray-6: #12181b; }
+  --gray-6: #12181b;
+  --tab-color: #191d2d;
+  --tab-hover: #f8f8f8; }
 
 * {
   margin: 0;
@@ -105,7 +108,11 @@ a {
 .header-border {
   box-shadow: 0 0 8px 1px var(--color-accent-medium); }
 
-header {
+.active-tab {
+  background: var(--color-accent-medium);
+  border-radius: 10px 0 0 0; }
+
+#header {
   background: var(--color-background);
   position: sticky;
   top: 0;
@@ -114,13 +121,13 @@ header {
   z-index: 22;
   margin: 10 auto 0;
   padding: 10px; }
-  header #navbar {
+  #header #navbar {
     display: flex;
     align-items: center;
     justify-content: space-between;
     max-width: 1280px;
     margin: auto; }
-    header #navbar .logo-back {
+    #header #navbar .logo-back {
       background-color: #131830;
       border-radius: 50%;
       width: 85px;
@@ -129,14 +136,14 @@ header {
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 8px 1px var(--color-accent-medium); }
-      header #navbar .logo-back .logo {
+      #header #navbar .logo-back .logo {
         width: 45px; }
-    header #navbar .right-nav {
+    #header #navbar .right-nav {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end; }
-      header #navbar .right-nav #theme-switch {
+      #header #navbar .right-nav #theme-switch {
         right: 2rem;
         width: 110px;
         font-size: 0.9rem;
@@ -147,21 +154,21 @@ header {
         letter-spacing: 1px;
         text-align: center;
         cursor: pointer; }
-      header #navbar .right-nav ul {
+      #header #navbar .right-nav ul {
         display: flex;
         justify-content: space-between;
         font-size: 1.2rem;
         width: 500px;
         padding: 0.5rem 0; }
-        header #navbar .right-nav ul li {
+        #header #navbar .right-nav ul li {
           color: var(--color-text);
           border-bottom: 3px transparent solid;
           padding-bottom: 0.5rem;
           transition: border-color 0.5s; }
-          header #navbar .right-nav ul li:hover {
+          #header #navbar .right-nav ul li:hover {
             cursor: pointer;
             border-bottom: 3px var(--color-text) solid; }
-          header #navbar .right-nav ul li.current {
+          #header #navbar .right-nav ul li.current {
             border-bottom: 3px var(--color-accent-light) solid; }
 
 #home-landing #landing-content {
@@ -263,24 +270,138 @@ header {
   #home-approach p {
     text-align: left; }
 
+#about-testimonials .test-card {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 2rem 0;
+  padding: 0 0.5rem; }
+  #about-testimonials .test-card .test-tile {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #131830;
+    border-radius: 5%;
+    height: 470px;
+    width: 400px;
+    overflow: hidden;
+    border: 2px solid var(--color-accent-medium);
+    box-shadow: 0px 2px 5px 1px #17472ba4; }
+    #about-testimonials .test-card .test-tile .test-text {
+      position: relative;
+      color: #131931;
+      background: var(--gray-0);
+      height: 280px;
+      border-radius: 15px;
+      padding: 2.5rem;
+      display: flex;
+      align-items: center;
+      text-align: left;
+      font-size: 1.2rem; }
+      #about-testimonials .test-card .test-tile .test-text p {
+        z-index: 1;
+        margin-left: 1rem; }
+      #about-testimonials .test-card .test-tile .test-text .arrow {
+        position: absolute;
+        border-left: 0 solid transparent;
+        border-right: 30px solid transparent;
+        border-top: 30px solid var(--gray-0);
+        top: 100%;
+        left: 75%;
+        z-index: 2; }
+      #about-testimonials .test-card .test-tile .test-text i {
+        color: var(--color-accent-medium);
+        position: absolute;
+        top: 2%;
+        left: 2%;
+        opacity: 1;
+        z-index: 0; }
+    #about-testimonials .test-card .test-tile .test-bio {
+      display: flex;
+      align-items: center;
+      text-align: left;
+      margin-top: 2rem;
+      padding: 1rem;
+      color: #f8f8f8;
+      width: 100%; }
+      #about-testimonials .test-card .test-tile .test-bio img {
+        height: 120px;
+        width: 120px;
+        border-radius: 50%;
+        border: 3px solid var(--color-accent-light);
+        left: 5%;
+        top: 30%;
+        margin-right: 2.2rem; }
+      #about-testimonials .test-card .test-tile .test-bio .test-name {
+        font-size: 1.3rem;
+        font-weight: 700; }
+
 #work-portfolio {
   min-height: 900px;
   text-align: center; }
   #work-portfolio #tabs {
     display: flex;
-    justify-content: end; }
-    #work-portfolio #tabs .tab-link {
-      position: relative;
-      font-size: 1.4rem;
-      padding: 0.5rem 1.5rem;
-      cursor: pointer; }
+    justify-content: end;
+    margin: 2rem 0;
+    border-bottom: var(--color-accent-medium) 2px solid; }
+    #work-portfolio #tabs #tab-list {
+      display: flex;
+      justify-content: end;
+      max-width: 80%;
+      background: var(--tab-color);
+      border-radius: 10px 0 0 0; }
+      #work-portfolio #tabs #tab-list .tab {
+        position: relative;
+        color: #f8f8f8;
+        font-size: 1.4rem;
+        padding: 0.5rem 1.5rem;
+        cursor: pointer; }
+        #work-portfolio #tabs #tab-list .tab:hover {
+          color: var(--color-accent-medium);
+          background: var(--tab-hover);
+          border-radius: 10px 0 0 0;
+          box-shadow: 0px -1px 5px 0px var(--color-accent-medium); }
   #work-portfolio #project-tiles {
     display: flex;
     justify-content: center;
     flex-wrap: wrap; }
-    #work-portfolio #project-tiles img {
-      width: 390px;
-      margin: 1rem; }
+    #work-portfolio #project-tiles .tile {
+      position: relative;
+      width: 400px;
+      height: 400px;
+      margin: 0.5rem;
+      border-radius: 2%;
+      box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+      overflow: hidden; }
+      #work-portfolio #project-tiles .tile-text {
+        position: absolute;
+        transform: translateY(100%);
+        transition: opacity 1s ease, transform 0.8s ease;
+        height: 100%;
+        width: 100%;
+        z-index: 3;
+        color: #f8f8f8;
+        opacity: 0; }
+      #work-portfolio #project-tiles .tile:hover .tile-text {
+        opacity: 1;
+        transform: translateY(70%); }
+      #work-portfolio #project-tiles .tile img {
+        width: 400px;
+        height: 400px;
+        object-fit: fill;
+        transition: 0.2s; }
+      #work-portfolio #project-tiles .tile:hover img {
+        transform: scale(1.1); }
+      #work-portfolio #project-tiles .tile::before {
+        content: '';
+        background: linear-gradient(#0e592c87 5%, #2a7a4a8b 10%, #29be65ee 50%, var(--color-accent-light));
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        transform: translateY(100%);
+        transition: all 0.2s ease-in;
+        z-index: 2; }
+      #work-portfolio #project-tiles .tile:hover::before {
+        transform: translateY(0); }
 
 #footer {
   border-top: var(--color-accent-medium) solid 1px;
