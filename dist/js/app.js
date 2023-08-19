@@ -24,7 +24,7 @@ const launchHome = (page) => {
   });
 };
 
-//Home Script
+//About Script
 const launchAbout = (page) => {
   window.onload = () => {
     if (!localStorage.getItem('theme')) {
@@ -37,15 +37,6 @@ const launchAbout = (page) => {
 
   const header = document.querySelector('#header');
   const learnMore = document.querySelector('#learn-more');
-
-  //Learn More button scroll
-  learnMore.addEventListener('click', () => {
-    window.scroll({
-      top: 803,
-      left: 0,
-      behavior: 'smooth',
-    });
-  });
 };
 
 // Work Page Script
