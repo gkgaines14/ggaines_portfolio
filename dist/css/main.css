@@ -27,7 +27,8 @@
 
 .heading {
   font-size: 2.2rem;
-  letter-spacing: 4px; }
+  letter-spacing: 4px;
+  color: #2a7a4a; }
 
 .center-middle {
   text-align: center;
@@ -72,6 +73,7 @@
   --color-accent-medium: #2a7a4a;
   --color-accent-dark: #17472b;
   --color-shadow: #333;
+  --form-shadow: rgba(178, 177, 177, 0.638);
   --gray-0: #f8f8f8;
   --gray-1: #dbe1e8;
   --gray-2: #b2becd;
@@ -118,7 +120,7 @@ a {
   top: 0;
   min-height: 12vh;
   width: 100%;
-  z-index: 22;
+  z-index: 40;
   margin: 10 auto 0;
   padding: 10px; }
   #header #navbar {
@@ -182,6 +184,8 @@ a {
     flex-direction: column;
     justify-content: center;
     width: 50%; }
+    #home-landing #landing-content #intro-message .label-box {
+      color: var(--color-text); }
     #home-landing #landing-content #intro-message .my-name {
       font-size: 4rem;
       font-weight: 800;
@@ -267,14 +271,12 @@ a {
 
 #home-approach {
   border-top: 3px solid var(--color-accent-medium);
+  height: 500px;
   text-align: center; }
   #home-approach p {
     text-align: left; }
 
-#about {
-  height: 800px;
-  width: 100%;
-  border-top: 3px solid var(--color-accent-medium);
+#about-bio {
   text-align: center; }
   #about-bio #bio-card {
     display: flex;
@@ -288,158 +290,160 @@ a {
       #about-bio #bio-card #bio-text p {
         padding: 0 0 1rem 2rem;
         text-align: left; }
-  #about-experience {
-    background: var(--color-primary2);
-    color: #f8f8f8;
-    height: 800px;
+
+#about-experience {
+  background: var(--color-primary2);
+  color: #f8f8f8;
+  height: 800px;
+  width: 100%;
+  border-top: 3px solid var(--color-accent-medium);
+  text-align: center; }
+  #about-experience #timeline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 500px;
     width: 100%;
-    border-top: 3px solid var(--color-accent-medium);
-    text-align: center; }
-    #about-experience #timeline {
-      display: flex;
+    position: relative; }
+    #about-experience #timeline #grid-card {
+      display: grid;
+      grid-template-rows: 200px 100px 200px;
+      grid-template-columns: repeat(5, 260px);
+      grid-template-areas: 't1 t2 t3 t4 t5' 'd1 d2 d3 d4 d5' 'b1 b2 b3 b4 b5';
       align-items: center;
-      justify-content: space-between;
-      height: 500px;
-      width: 100%;
-      position: relative; }
-      #about-experience #timeline #grid-card {
-        display: grid;
-        grid-template-rows: 200px 100px 200px;
-        grid-template-columns: repeat(5, 260px);
-        grid-template-areas: 't1 t2 t3 t4 t5' 'd1 d2 d3 d4 d5' 'b1 b2 b3 b4 b5';
-        align-items: center;
-        justify-content: flex-end;
-        z-index: 1; }
-        #about-experience #timeline #grid-card .date-block {
-          display: flex;
-          align-items: center;
-          z-index: 1; }
-          #about-experience #timeline #grid-card .date-block .box {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            background: var(--color-accent-medium);
-            width: 140px;
-            height: 40px;
-            border-radius: 5px 0 0 5px; }
-          #about-experience #timeline #grid-card .date-block .triangle {
-            border-left: solid 40px var(--color-accent-medium);
-            border-top: solid 20px transparent;
-            border-bottom: solid 20px transparent; }
-        #about-experience #timeline #grid-card #date-1 {
-          grid-area: d1; }
-        #about-experience #timeline #grid-card #date-2 {
-          grid-area: d2; }
-        #about-experience #timeline #grid-card #date-3 {
-          grid-area: d3; }
-        #about-experience #timeline #grid-card #date-4 {
-          grid-area: d4; }
-        #about-experience #timeline #grid-card #date-5 {
-          grid-area: d5; }
-        #about-experience #timeline #grid-card #exp-1 {
-          grid-area: t1; }
-        #about-experience #timeline #grid-card #exp-2 {
-          grid-area: b2; }
-        #about-experience #timeline #grid-card #exp-3 {
-          grid-area: t3; }
-        #about-experience #timeline #grid-card #exp-4 {
-          grid-area: b4; }
-        #about-experience #timeline #grid-card #exp-5 {
-          grid-area: t5; }
-        #about-experience #timeline #grid-card .top {
-          border-left-width: 3px;
-          border-left-style: solid;
-          /* border-image: linear-gradient(to bottom, rgb(49, 120, 49), var(--background))
-            1 100%; */
-          border-image: linear-gradient(to top, var(--color-primary2), rgba(61, 128, 61, 0.568) 40%, rgba(139, 210, 139, 0.688) 70%, #408740 80%) 1 100%;
-          text-align: left; }
-        #about-experience #timeline #grid-card .bottom {
-          border-left-width: 3px;
-          border-left-style: solid;
-          border-image: linear-gradient(to bottom, var(--color-primary2), rgba(61, 128, 61, 0.568) 40%, rgba(139, 210, 139, 0.688) 70%, #408740 80%) 1 100%;
-          align-items: end;
-          text-align: left; }
-        #about-experience #timeline #grid-card .exp-item {
-          padding-left: 1rem; }
-          #about-experience #timeline #grid-card .exp-item .exp-label {
-            font-weight: 700;
-            font-size: 1.1rem;
-            margin-bottom: 1rem; }
-      #about-experience #timeline .line {
-        width: 100%;
-        border-bottom: solid 2px var(--color-accent-medium);
-        position: absolute; }
-      #about-experience #timeline .date {
-        font-family: 'Roboto', sans-serif;
-        font-size: 1.5rem; }
-  #about-testimonials {
-    height: 800px;
-    width: 100%;
-    border-top: 3px solid var(--color-accent-medium);
-    text-align: center; }
-    #about-testimonials .test-card {
-      display: flex;
-      justify-content: space-between;
-      margin: 2rem 0; }
-      #about-testimonials .test-card .test-tile {
+      justify-content: flex-end;
+      z-index: 1; }
+      #about-experience #timeline #grid-card .date-block {
         display: flex;
         align-items: center;
-        flex-direction: column;
-        background: var(--color-primary2);
-        border-radius: 5%;
-        height: 470px;
-        width: 400px;
-        overflow: hidden;
-        border: 2px solid var(--color-accent-medium);
-        box-shadow: 0px 2px 5px 1px #17472ba4; }
-        #about-testimonials .test-card .test-tile .test-text {
-          position: relative;
-          color: #131931;
-          background: var(--gray-0);
-          height: 280px;
-          border-radius: 15px;
-          padding: 2.5rem;
+        z-index: 1; }
+        #about-experience #timeline #grid-card .date-block .box {
           display: flex;
           align-items: center;
-          text-align: left;
-          font-size: 1.2rem; }
-          #about-testimonials .test-card .test-tile .test-text p {
-            z-index: 1;
-            margin-left: 1rem; }
-          #about-testimonials .test-card .test-tile .test-text .arrow {
-            position: absolute;
-            border-left: 0 solid transparent;
-            border-right: 30px solid transparent;
-            border-top: 30px solid var(--gray-0);
-            top: 100%;
-            left: 75%;
-            z-index: 2; }
-          #about-testimonials .test-card .test-tile .test-text i {
-            color: var(--color-accent-medium);
-            position: absolute;
-            top: 2%;
-            left: 2%;
-            opacity: 1;
-            z-index: 0; }
-        #about-testimonials .test-card .test-tile .test-bio {
-          display: flex;
-          align-items: center;
-          text-align: left;
-          margin-top: 2rem;
-          padding: 1rem;
-          color: #f8f8f8;
-          width: 100%; }
-          #about-testimonials .test-card .test-tile .test-bio img {
-            height: 120px;
-            width: 120px;
-            border-radius: 50%;
-            border: 3px solid var(--color-accent-light);
-            left: 5%;
-            top: 30%;
-            margin-right: 2.2rem; }
-          #about-testimonials .test-card .test-tile .test-bio .test-name {
-            font-size: 1.3rem;
-            font-weight: 700; }
+          justify-content: center;
+          background: var(--color-accent-medium);
+          width: 140px;
+          height: 40px;
+          border-radius: 5px 0 0 5px; }
+        #about-experience #timeline #grid-card .date-block .triangle {
+          border-left: solid 40px var(--color-accent-medium);
+          border-top: solid 20px transparent;
+          border-bottom: solid 20px transparent; }
+      #about-experience #timeline #grid-card #date-1 {
+        grid-area: d1; }
+      #about-experience #timeline #grid-card #date-2 {
+        grid-area: d2; }
+      #about-experience #timeline #grid-card #date-3 {
+        grid-area: d3; }
+      #about-experience #timeline #grid-card #date-4 {
+        grid-area: d4; }
+      #about-experience #timeline #grid-card #date-5 {
+        grid-area: d5; }
+      #about-experience #timeline #grid-card #exp-1 {
+        grid-area: t1; }
+      #about-experience #timeline #grid-card #exp-2 {
+        grid-area: b2; }
+      #about-experience #timeline #grid-card #exp-3 {
+        grid-area: t3; }
+      #about-experience #timeline #grid-card #exp-4 {
+        grid-area: b4; }
+      #about-experience #timeline #grid-card #exp-5 {
+        grid-area: t5; }
+      #about-experience #timeline #grid-card .top {
+        border-left-width: 3px;
+        border-left-style: solid;
+        /* border-image: linear-gradient(to bottom, rgb(49, 120, 49), var(--background))
+            1 100%; */
+        border-image: linear-gradient(to top, var(--color-primary2), rgba(61, 128, 61, 0.568) 40%, rgba(139, 210, 139, 0.688) 70%, #408740 80%) 1 100%;
+        text-align: left; }
+      #about-experience #timeline #grid-card .bottom {
+        border-left-width: 3px;
+        border-left-style: solid;
+        border-image: linear-gradient(to bottom, var(--color-primary2), rgba(61, 128, 61, 0.568) 40%, rgba(139, 210, 139, 0.688) 70%, #408740 80%) 1 100%;
+        align-items: end;
+        text-align: left; }
+      #about-experience #timeline #grid-card .exp-item {
+        padding-left: 1rem; }
+        #about-experience #timeline #grid-card .exp-item .exp-label {
+          font-weight: 700;
+          font-size: 1.1rem;
+          margin-bottom: 1rem; }
+    #about-experience #timeline .line {
+      width: 100%;
+      border-bottom: solid 2px var(--color-accent-medium);
+      position: absolute; }
+    #about-experience #timeline .date {
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.5rem; }
+
+#about-testimonials {
+  height: 800px;
+  width: 100%;
+  border-top: 3px solid var(--color-accent-medium);
+  text-align: center; }
+  #about-testimonials .test-card {
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0; }
+    #about-testimonials .test-card .test-tile {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      background: var(--color-primary2);
+      border-radius: 5%;
+      height: 470px;
+      width: 400px;
+      overflow: hidden;
+      border: 2px solid var(--color-accent-medium);
+      box-shadow: 0px 2px 5px 1px #17472ba4; }
+      #about-testimonials .test-card .test-tile .test-text {
+        position: relative;
+        color: #131931;
+        background: var(--gray-0);
+        height: 280px;
+        border-radius: 15px;
+        padding: 2.5rem;
+        display: flex;
+        align-items: center;
+        text-align: left;
+        font-size: 1.2rem; }
+        #about-testimonials .test-card .test-tile .test-text p {
+          z-index: 1;
+          margin-left: 1rem; }
+        #about-testimonials .test-card .test-tile .test-text .arrow {
+          position: absolute;
+          border-left: 0 solid transparent;
+          border-right: 30px solid transparent;
+          border-top: 30px solid var(--gray-0);
+          top: 100%;
+          left: 75%;
+          z-index: 2; }
+        #about-testimonials .test-card .test-tile .test-text i {
+          color: var(--color-accent-medium);
+          position: absolute;
+          top: 2%;
+          left: 2%;
+          opacity: 1;
+          z-index: 0; }
+      #about-testimonials .test-card .test-tile .test-bio {
+        display: flex;
+        align-items: center;
+        text-align: left;
+        margin-top: 2rem;
+        padding: 1rem;
+        color: #f8f8f8;
+        width: 100%; }
+        #about-testimonials .test-card .test-tile .test-bio img {
+          height: 120px;
+          width: 120px;
+          border-radius: 50%;
+          border: 3px solid var(--color-accent-light);
+          left: 5%;
+          top: 30%;
+          margin-right: 2.2rem; }
+        #about-testimonials .test-card .test-tile .test-bio .test-name {
+          font-size: 1.3rem;
+          font-weight: 700; }
 
 #work-portfolio {
   min-height: 900px;
@@ -508,6 +512,113 @@ a {
         z-index: 2; }
       #work-portfolio #project-tiles .tile:hover::before {
         transform: translateY(0); }
+
+#contact {
+  text-align: center; }
+  #contact-input #cont-card {
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    padding: 0 2rem;
+    margin: 0 auto 3rem; }
+    #contact-input #cont-card #cont-info {
+      text-align: left;
+      width: 75%;
+      padding: 0 1rem 2rem 1rem; }
+    #contact-input #cont-card .form-card {
+      position: relative;
+      z-index: 4;
+      width: 100%; }
+      #contact-input #cont-card .form-card .image-back {
+        position: absolute;
+        z-index: -2;
+        background: radial-gradient(var(--color-accent-medium) 45%, var(--color-dark) 75%);
+        top: -40%;
+        right: -5%;
+        height: 250px;
+        width: 250px;
+        box-shadow: 0 0 18px 2px var(--color-accent-medium);
+        border-radius: 50%; }
+      #contact-input #cont-card .form-card .image-ring {
+        position: absolute;
+        z-index: -1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--gray-0);
+        top: -35%;
+        right: -3%;
+        height: 200px;
+        width: 200px;
+        border: green 4px solid;
+        border-radius: 50%;
+        text-align: center; }
+        #contact-input #cont-card .form-card .image-ring i {
+          margin-left: 0.8rem;
+          color: var(--color-accent-medium); }
+      #contact-input #cont-card .form-card #cont-form {
+        background: var(--gray-0);
+        display: flex;
+        flex-direction: column;
+        padding: 2rem;
+        box-shadow: 0 2px 12px 4px var(--form-shadow);
+        border-radius: 8px; }
+        #contact-input #cont-card .form-card #cont-form #input-fields {
+          display: flex;
+          flex-direction: column; }
+        #contact-input #cont-card .form-card #cont-form .text-input {
+          background-color: var(--gray-1);
+          color: var(--color-accent-medium);
+          border: none;
+          margin-bottom: 1rem;
+          padding: 1rem;
+          border-radius: 5px;
+          font-size: 1.2rem;
+          font-family: 'Dosis', sans-serif; }
+        #contact-input #cont-card .form-card #cont-form input {
+          height: 50px; }
+        #contact-input #cont-card .form-card #cont-form input::placeholder,
+        #contact-input #cont-card .form-card #cont-form textarea::placeholder {
+          color: #a0aab7;
+          font-size: 1.2rem;
+          font-family: 'Dosis', sans-serif; }
+        #contact-input #cont-card .form-card #cont-form .text-input:focus {
+          outline: none;
+          border: 2px solid var(--color-accent-medium); }
+        #contact-input #cont-card .form-card #cont-form button:focus {
+          outline: none; }
+        #contact-input #cont-card .form-card #cont-form .message-input {
+          height: 200px; }
+        #contact-input #cont-card .form-card #cont-form button {
+          width: 100%; }
+        #contact-input #cont-card .form-card #cont-form button:focus {
+          outline: none;
+          background: #28af60; }
+  #contact-closing {
+    background: var(--color-primary2);
+    color: #f8f8f8;
+    height: 300px;
+    width: 100%;
+    border-top: 3px solid var(--color-accent-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto; }
+    #contact-closing h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem; }
+    #contact-closing a,
+    #contact-closing p {
+      font-size: 1.7rem; }
+    #contact-closing .email-tag {
+      display: flex;
+      justify-content: center; }
+      #contact-closing .email-tag i {
+        margin-right: 1rem;
+        padding-top: 0.5rem; }
+    #contact-closing .email-tag:hover {
+      color: var(--color-accent-light); }
 
 #footer {
   border-top: var(--color-accent-medium) solid 1px;

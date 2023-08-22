@@ -12,6 +12,7 @@
   --color-accent-medium: #2a7a4a;
   --color-accent-dark: #17472b;
   --color-shadow: #333;
+  --form-shadow: rgba(178, 177, 177, 0.638);
 
   --gray-0: #f8f8f8;
   --gray-1: #dbe1e8;
@@ -74,7 +75,7 @@ a {
   top: 0;
   min-height: 12vh;
   width: 100%;
-  z-index: 22;
+  z-index: 40;
   margin: 10 auto 0;
   padding: 10px;
 
@@ -163,6 +164,10 @@ a {
         flex-direction: column;
         justify-content: center;
         width: 50%;
+
+        .label-box {
+          color: var(--color-text);
+        }
 
         .my-name {
           font-size: 4rem;
@@ -306,7 +311,7 @@ a {
 
   &-approach {
     border-top: 3px solid var(--color-accent-medium);
-
+    height: 500px;
     text-align: center;
 
     p {
@@ -318,12 +323,9 @@ a {
 // About Page
 
 #about {
-  height: 800px;
-  width: 100%;
-  border-top: 3px solid var(--color-accent-medium);
-  text-align: center;
-
   &-bio {
+    text-align: center;
+
     #bio-card {
       display: flex;
       margin-top: 2rem;
@@ -708,6 +710,165 @@ a {
 
 //Contact
 #contact {
+  // min-height: 100vh;
+  text-align: center;
+
+  &-input {
+    #cont-card {
+      // display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 80%;
+      padding: 0 2rem;
+      margin: 0 auto 3rem;
+
+      #cont-info {
+        // display: flex;
+        // flex-direction: column;
+        // justify-content: space-evenly;
+        text-align: left;
+        // padding-bottom: 2rem;
+        width: 75%;
+        padding: 0 1rem 2rem 1rem;
+      }
+
+      .form-card {
+        position: relative;
+        z-index: 4;
+        width: 100%;
+
+        .image-back {
+          position: absolute;
+          z-index: -2;
+          background: radial-gradient(
+            var(--color-accent-medium) 45%,
+            var(--color-dark) 75%,
+            // white 90%
+          );
+          top: -40%;
+          right: -5%;
+          height: 250px;
+          width: 250px;
+          // border: green 4px solid;
+          box-shadow: 0 0 18px 2px var(--color-accent-medium);
+          border-radius: 50%;
+        }
+
+        .image-ring {
+          position: absolute;
+          z-index: -1;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background: var(--gray-0);
+          top: -35%;
+          right: -3%;
+          height: 200px;
+          width: 200px;
+          border: green 4px solid;
+          border-radius: 50%;
+          text-align: center;
+
+          i {
+            margin-left: 0.8rem;
+            color: var(--color-accent-medium);
+          }
+        }
+
+        #cont-form {
+          background: var(--gray-0);
+          display: flex;
+          flex-direction: column;
+          padding: 2rem;
+          box-shadow: 0 2px 12px 4px var(--form-shadow);
+          border-radius: 8px;
+
+          #input-fields {
+            display: flex;
+            flex-direction: column;
+          }
+
+          .text-input {
+            background-color: var(--gray-1);
+            color: var(--color-accent-medium);
+            border: none;
+            margin-bottom: 1rem;
+            padding: 1rem;
+            border-radius: 5px;
+            font-size: 1.2rem;
+            font-family: 'Dosis', sans-serif;
+          }
+          input {
+            height: 50px;
+          }
+
+          input::placeholder,
+          textarea::placeholder {
+            color: #a0aab7;
+            font-size: 1.2rem;
+            font-family: 'Dosis', sans-serif;
+          }
+
+          .text-input:focus {
+            outline: none;
+            border: 2px solid var(--color-accent-medium);
+          }
+
+          button:focus {
+            outline: none;
+          }
+
+          .message-input {
+            height: 200px;
+          }
+          button {
+            width: 100%;
+          }
+          button:focus {
+            outline: none;
+            background: #28af60;
+          }
+        }
+      }
+    }
+  }
+
+  &-closing {
+    background: var(--color-primary2);
+    color: #f8f8f8;
+    height: 300px;
+    width: 100%;
+    border-top: 3px solid var(--color-accent-medium);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    a,
+    p {
+      font-size: 1.7rem;
+    }
+
+    .email-tag {
+      display: flex;
+      // align-items: center;
+      justify-content: center;
+
+      i {
+        margin-right: 1rem;
+        padding-top: 0.5rem;
+      }
+    }
+    .email-tag:hover {
+      color: var(--color-accent-light);
+    }
+  }
 }
 
 //Footer

@@ -36,7 +36,20 @@ const launchAbout = (page) => {
   };
 
   const header = document.querySelector('#header');
-  const learnMore = document.querySelector('#learn-more');
+};
+
+//Contact Script
+const launchContact = (page) => {
+  window.onload = () => {
+    if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'dark');
+    }
+    setTheme(localStorage.getItem('theme'));
+    loadListeners();
+    console.log('About page loaded');
+  };
+
+  const header = document.querySelector('#header');
 };
 
 // Work Page Script
@@ -146,6 +159,10 @@ const pageManager = {
       case 'about':
         console.log(page);
         launchAbout(page);
+        break;
+      case 'contact':
+        console.log(page);
+        launchContact(page);
         break;
       default:
       // launchHome(page);
