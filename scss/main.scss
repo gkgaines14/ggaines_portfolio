@@ -6,10 +6,10 @@
   --color-background: #131830;
   // --color-background: #181e38;
   --color-primary: #232fb3;
-  --color-primary2: #1f2952;
+  --color-primary2: rgb(31, 41, 82);
   --color-dark: #191d2d;
   --color-accent-light: #28af60;
-  --color-accent-medium: #2a7a4a;
+  --color-accent-medium: rgb(42, 122, 74);
   --color-accent-dark: #17472b;
   --color-shadow: #333;
   --form-shadow: rgba(178, 177, 177, 0.638);
@@ -261,7 +261,7 @@ a {
 
       .spec-item {
         width: 300px;
-        height: 320px;
+        height: 600px;
         background: #1c2446;
         border: solid 3px var(--color-accent-light);
         border-radius: 10px;
@@ -350,7 +350,7 @@ a {
   &-experience {
     background: var(--color-primary2);
     color: #f8f8f8;
-    height: 800px;
+    height: 1000px;
     width: 100%;
     border-top: 3px solid var(--color-accent-medium);
     text-align: center;
@@ -358,17 +358,17 @@ a {
     #timeline {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      height: 500px;
+      height: 650px;
       width: 100%;
       position: relative;
+      margin-top: 3rem;
 
       #grid-card {
         display: grid;
-        grid-template-rows: 200px 100px 200px;
-        grid-template-columns: repeat(5, 260px);
+        grid-template-rows: 280px 100px 280px;
+        grid-template-columns: repeat(5, 240px);
         grid-template-areas:
-          't1 t2 t3 t4 t5'
+          't1 t1 t3 t4 t5'
           'd1 d2 d3 d4 d5'
           'b1 b2 b3 b4 b5';
         align-items: center;
@@ -456,17 +456,28 @@ a {
               rgb(64, 135, 64) 80%
             )
             1 100%;
-          align-items: end;
+          display: flex;
+          flex-direction: column;
+          justify-content: end;
+          // align-items: end;
           text-align: left;
         }
 
         .exp-item {
+          height: 300px;
+          width: 340px;
           padding-left: 1rem;
+          overflow: hidden;
+          font-size: 13pt;
 
           .exp-label {
+            color: var(--color-accent-light);
+            font-family: 'Roboto', sans-serif;
             font-weight: 700;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
             margin-bottom: 1rem;
+            // letter-spacing: 1pt;
+            // border-bottom: var(--color-accent-medium) 1px solid;
           }
 
           // p {
@@ -641,11 +652,12 @@ a {
 
       .tile {
         position: relative;
+        background: var(--gray-2);
         width: 400px;
         height: 400px;
-        margin: 0.5rem;
+        margin: 0.8rem;
         border-radius: 2%;
-        box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3);
+        box-shadow: 0 5px 10px 3px rgba(0, 0, 0, 0.3);
         overflow: hidden;
 
         &-text {
@@ -657,12 +669,32 @@ a {
           z-index: 3;
           color: #f8f8f8;
           opacity: 0;
+          padding: 1.5rem;
+          text-align: left;
+        }
+
+        .explore-btn {
+          display: flex;
+          align-items: center;
+          justify-content: space-evenly;
+          width: 110px;
+          height: 36px;
+          background: white;
+          color: rgb(40, 189, 100);
+          border-radius: 6px;
+          font-size: 1.3rem;
+          padding: 0.5rem;
+          cursor: pointer;
+
+          i {
+            padding-top: 0.3rem;
+          }
         }
 
         &:hover .tile-text {
           // color: red;
           opacity: 1;
-          transform: translateY(70%);
+          transform: translateY(23%);
         }
 
         img {
@@ -714,6 +746,19 @@ a {
   text-align: center;
 
   &-input {
+    height: 100vh;
+
+    .light-box {
+      background-color: var(--color-primary2);
+      color: #f8f8f8;
+      border-radius: 20px;
+      width: 95%;
+      // height: 95%;
+      box-shadow: 0 2px 12px 4px #131830;
+      margin: auto;
+      padding-bottom: 3px;
+    }
+
     #cont-card {
       // display: flex;
       flex-direction: column;
@@ -737,21 +782,45 @@ a {
         z-index: 4;
         width: 100%;
 
+        .mail-icon-box {
+          position: absolute;
+          top: -14%;
+          right: 5%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+
         .image-back {
           position: absolute;
-          z-index: -2;
+          z-index: -3;
           background: radial-gradient(
             var(--color-accent-medium) 45%,
             var(--color-dark) 75%,
             // white 90%
           );
-          top: -40%;
-          right: -5%;
           height: 250px;
           width: 250px;
           // border: green 4px solid;
           box-shadow: 0 0 18px 2px var(--color-accent-medium);
           border-radius: 50%;
+        }
+
+        .image-back-glow {
+          position: absolute;
+          z-index: -2;
+          background: radial-gradient(
+            var(--color-accent-medium) 65%,
+            var(--color-accent-light) 70%,
+            // white 90%
+          );
+          height: 250px;
+          width: 250px;
+          // border: green 4px solid;
+          box-shadow: 0 0 15px 8px var(--color-accent-medium);
+          border-radius: 50%;
+          transition: 1.3s;
+          opacity: 0;
         }
 
         .image-ring {
@@ -761,16 +830,13 @@ a {
           align-items: center;
           justify-content: center;
           background: var(--gray-0);
-          top: -35%;
-          right: -3%;
           height: 200px;
           width: 200px;
           border: green 4px solid;
           border-radius: 50%;
-          text-align: center;
 
           i {
-            margin-left: 0.8rem;
+            margin-left: 0.6rem;
             color: var(--color-accent-medium);
           }
         }
@@ -780,7 +846,8 @@ a {
           display: flex;
           flex-direction: column;
           padding: 2rem;
-          box-shadow: 0 2px 12px 4px var(--form-shadow);
+          box-shadow: 0 2px 12px 4px #131830;
+          // box-shadow: 0 2px 12px 4px var(--form-shadow);
           border-radius: 8px;
 
           #input-fields {
@@ -814,21 +881,30 @@ a {
             border: 2px solid var(--color-accent-medium);
           }
 
-          button:focus {
-            outline: none;
-          }
-
           .message-input {
-            height: 200px;
+            height: 135px;
           }
-          button {
+          #submit-btn {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+            letter-spacing: 3px;
             width: 100%;
           }
-          button:focus {
+
+          #submit-btn:focus {
             outline: none;
             background: #28af60;
           }
         }
+      }
+      .confirm-message {
+        color: var(--color-accent-light);
+        font-size: 1.4rem;
+        transition: 0.7s;
+        margin-top: 1.5rem;
+        opacity: 0;
       }
     }
   }

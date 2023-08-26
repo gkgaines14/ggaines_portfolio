@@ -41,47 +41,57 @@
     <!-- Section: Contact Me -->
     <section id="contact-input">
       <div class="container py-2">
-        <div class="heading py-2">Contact Me</div>
+        <div class="light-box">
+          <div class="heading py-2">Contact Me</div>
 
-        <div id="cont-card">
-          <div id="cont-info">
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
-              minus deleniti in delectus quisquam eligendi provident id eius
-              totam. Amet quam sunt possimus ullam modi eligendi molestiae
-              facilis aliquam laborum.
-            </p>
-          </div>
-          <div class="form-card">
-            <div class="image-ring">
-              <i class="fa-solid fa-envelope-circle-check fa-7x"></i>
+          <div id="cont-card">
+            <div id="cont-info">
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit
+                minus deleniti in delectus quisquam eligendi provident id eius
+                totam. Amet quam sunt possimus ullam modi eligendi molestiae
+                facilis aliquam laborum.
+              </p>
             </div>
-            <div class="image-back"></div>
-
-            <form id="cont-form">
-              <div id="input-fields">
-                <input
-                  type="text"
-                  class="text-input name-input"
-                  placeholder="Name"
-                />
-                <input
-                  type="text"
-                  class="text-input subject-input"
-                  placeholder="Subject"
-                />
-                <input
-                  type="email"
-                  class="text-input email-input"
-                  placeholder="Email Address"
-                />
-                <textarea
-                  class="text-input message-input"
-                  placeholder="Enter Message"
-                ></textarea>
+            <div class="form-card">
+              <div class="mail-icon-box">
+                <div class="image-ring">
+                  <i class="fa-solid fa-envelope-circle-check fa-7x"></i>
+                </div>
+                <div id="mail-icon-glow" class="image-back-glow"></div>
+                <div class="image-back"></div>
               </div>
-              <button type="submit" class="btn-light">Submit</button>
-            </form>
+
+              <form id="cont-form">
+                <div id="input-fields">
+                  <input
+                    type="text"
+                    class="text-input name-input"
+                    placeholder="Name"
+                  />
+                  <input
+                    type="text"
+                    class="text-input subject-input"
+                    placeholder="Subject"
+                  />
+                  <input
+                    type="email"
+                    class="text-input email-input"
+                    placeholder="Email Address"
+                  />
+                  <textarea
+                    class="text-input message-input"
+                    placeholder="Enter Message"
+                  ></textarea>
+                </div>
+                <div class="btn-light" id="submit-btn">
+                  <p>SUBMIT</p>
+                </div>
+              </form>
+            </div>
+            <div class="confirm-message">
+              You're message has been submitted successfully. Thanks!
+            </div>
           </div>
         </div>
       </div>

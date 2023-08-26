@@ -38,20 +38,6 @@ const launchAbout = (page) => {
   const header = document.querySelector('#header');
 };
 
-//Contact Script
-const launchContact = (page) => {
-  window.onload = () => {
-    if (!localStorage.getItem('theme')) {
-      localStorage.setItem('theme', 'dark');
-    }
-    setTheme(localStorage.getItem('theme'));
-    loadListeners();
-    console.log('About page loaded');
-  };
-
-  const header = document.querySelector('#header');
-};
-
 // Work Page Script
 
 const launchWork = (page) => {
@@ -139,6 +125,48 @@ const launchWork = (page) => {
     sitesTab.className = 'tab';
     appsTab.className = 'tab';
     codeTab.className = 'tab active-tab';
+  });
+};
+
+//Contact Script
+const launchContact = (page) => {
+  window.onload = () => {
+    if (!localStorage.getItem('theme')) {
+      localStorage.setItem('theme', 'dark');
+    }
+    setTheme(localStorage.getItem('theme'));
+    loadListeners();
+    console.log('About page loaded');
+  };
+
+  const header = document.querySelector('#header');
+  const submitButton = document.querySelector('#submit-btn');
+  const confirmMessage = document.querySelector('.confirm-message');
+  const imageBack = document.querySelector('#mail-icon-glow');
+
+  // submitButton.addEventListener('mousedown', (e) => {
+  //   submitButton.style.width = '98%';
+  //   submitButton.style.height = '46px';
+  //   console.log('mouse is down');
+  // });
+  // submitButton.addEventListener('mouseup', (e) => {
+  //   submitButton.style.width = '100%';
+  //   submitButton.style.height = '50px';
+  //   console.log('mouse is up');
+  // });
+  submitButton.addEventListener('click', (e) => {
+    confirmMessage.style.opacity = '1';
+    imageBack.style.opacity = '1';
+    submitButton.style.fontSize = '1.3rem';
+    setTimeout(() => {
+      confirmMessage.style.opacity = '0';
+    }, '5000');
+    setTimeout(() => {
+      imageBack.style.opacity = '0';
+    }, '670');
+    setTimeout(() => {
+      submitButton.style.fontSize = '1.2rem';
+    }, '200');
   });
 };
 

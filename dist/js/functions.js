@@ -7,7 +7,7 @@ export const setTheme = (themeSetting) => {
     document.documentElement.style.setProperty('--color-text', 'white');
     document.documentElement.style.setProperty('--color-background', '#131931');
     document.documentElement.style.setProperty('--tab-color', '#191d2d');
-    document.documentElement.style.setProperty('--form-shadow', '#131830');
+    // document.documentElement.style.setProperty('--form-shadow', '#131830');
     document.querySelector('.logo-back').style.backgroundColor = '#131830';
     document.querySelector('.logo-back').style.boxShadow =
       '0 0 8px 1px var(--color-accent-medium)';
@@ -26,10 +26,10 @@ export const setTheme = (themeSetting) => {
     );
     document.documentElement.style.setProperty('--tab-color', '#1f2952');
 
-    document.documentElement.style.setProperty(
-      '--form-shadow',
-      'rgba(178, 177, 177, 0.638)'
-    );
+    // document.documentElement.style.setProperty(
+    //   '--form-shadow',
+    //   'rgba(178, 177, 177, 0.638)'
+    // );
 
     document.querySelector('.logo-back').style.backgroundColor =
       'var(--color-accent-light)';
