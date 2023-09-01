@@ -96,7 +96,8 @@ body {
   color: var(--color-text);
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
-  font-size: 1.1rem; }
+  font-size: 14pt;
+  letter-spacing: 0.8px; }
 
 a {
   display: inline-block;
@@ -193,7 +194,7 @@ a {
       font-family: 'Roboto', sans-serif; }
     #home-landing #landing-content #intro-message p {
       margin-bottom: 4rem;
-      font-size: 1.4rem; }
+      font-size: 1.3rem; }
   #home-landing #landing-content #headshot-card {
     width: 50%;
     display: flex;
@@ -236,27 +237,25 @@ a {
   #home-special #specials {
     display: flex;
     justify-content: space-evenly;
-    margin-top: 7rem; }
+    margin-top: 6rem; }
     #home-special #specials .spec-item {
-      width: 300px;
-      height: 600px;
+      min-width: 300px;
+      height: 475px;
       background: #1c2446;
       border: solid 3px var(--color-accent-light);
       border-radius: 10px;
-      margin: 1rem;
-      padding: 1.4rem;
+      margin: 0.6rem;
+      padding: 1.1rem;
       position: relative;
       display: flex;
       flex-direction: column;
-      justify-content: flex-end; }
+      font-size: 14pt; }
       #home-special #specials .spec-item .spec-desc {
         height: 205px; }
-        #home-special #specials .spec-item .spec-desc p.center-middle {
-          height: 100px; }
       #home-special #specials .spec-item .icon-frame {
         position: absolute;
-        top: -20%;
-        left: 25%;
+        top: -17%;
+        left: 28%;
         background: var(--color-accent-light);
         border-radius: 50%;
         width: 130px;
@@ -265,7 +264,7 @@ a {
           color: #f8f8f8; }
       #home-special #specials .spec-item .label-frame {
         height: 90px;
-        margin-bottom: 0.5rem; }
+        margin: 3rem 0 0.5rem; }
   #home-special a {
     margin: 3rem; }
 
@@ -282,11 +281,11 @@ a {
     display: flex;
     margin-top: 2rem; }
     #about-bio #bio-card img {
-      width: 500px;
-      height: 500px;
+      height: 600px;
       margin-right: 2rem; }
     #about-bio #bio-card #bio-text {
-      border-left: 2px solid var(--color-accent-medium); }
+      border-left: 2px solid var(--color-accent-medium);
+      height: 600px; }
       #about-bio #bio-card #bio-text p {
         padding: 0 0 1rem 2rem;
         text-align: left; }
@@ -690,3 +689,94 @@ a {
           color: #f8f8f8; }
           #footer .footer-content .socials .social-icons i:hover {
             color: var(--color-accent-light); }
+
+@media screen and (max-width: 500px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center; }
+  section {
+    padding: 1rem; }
+  #about-bio #bio-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0; }
+    #about-bio #bio-card img {
+      width: 100%;
+      height: auto;
+      margin: 0 0 2rem 0;
+      padding-bottom: 2rem;
+      object-fit: contain;
+      border-bottom: 2px solid var(--color-accent-medium); }
+    #about-bio #bio-card #bio-text {
+      border-left: none;
+      height: 600px; }
+      #about-bio #bio-card #bio-text p {
+        padding: 0 0 1rem 1rem;
+        text-align: left; }
+  #about-experience {
+    height: auto; }
+    #about-experience #exp-text {
+      padding: 2rem 0 1rem 1rem;
+      text-align: left; }
+    #about-experience #timeline {
+      display: inline;
+      width: 100%;
+      margin-bottom: 2rem; }
+      #about-experience #timeline #grid-card {
+        display: grid;
+        grid-template-rows: repeat(5, 40px auto);
+        grid-template-columns: auto;
+        grid-template-areas: 'd1' 't1' 'd2' 'b2' 'd3' 't3' 'd4' 'b4' 'd5' 't5';
+        padding: 0;
+        align-items: center;
+        justify-content: flex-start;
+        margin-top: 1rem; }
+        #about-experience #timeline #grid-card .date-block .box {
+          width: 100%;
+          border-radius: 5px 5px 5px 0; }
+        #about-experience #timeline #grid-card .date-block .triangle {
+          display: none; }
+        #about-experience #timeline #grid-card .bottom {
+          border-left-width: 3px;
+          border-left-style: solid;
+          /* border-image: linear-gradient(
+              to top,
+              var(--background),
+              rgba(61, 128, 61, 0.568) 40%,
+              rgba(139, 210, 139, 0.688) 70%,
+          rgb(64, 135, 64) 80%
+        )
+        1 100%; */
+          border-image: linear-gradient(to top, var(--color-primary2), rgba(61, 128, 61, 0.568) 40%, rgba(139, 210, 139, 0.688) 70%, #408740 80%) 1 100%; }
+        #about-experience #timeline #grid-card .exp-item {
+          width: 100%;
+          height: auto;
+          margin-bottom: 1rem;
+          padding: 1rem; }
+      #about-experience #timeline .line {
+        display: none; }
+  #about-testimonials {
+    height: auto; }
+    #about-testimonials #test-intro {
+      text-align: left;
+      padding: 2rem 0 1rem 1rem; }
+    #about-testimonials .test-card {
+      flex-direction: column; }
+      #about-testimonials .test-card .test-tile {
+        height: auto;
+        width: 100%;
+        margin-bottom: 2em; }
+        #about-testimonials .test-card .test-tile .test-text {
+          height: auto; }
+          #about-testimonials .test-card .test-tile .test-text .arrow {
+            top: 99%;
+            z-index: 0; }
+        #about-testimonials .test-card .test-tile .test-bio {
+          width: 100%;
+          justify-content: space-between;
+          padding: 0.5rem; }
+          #about-testimonials .test-card .test-tile .test-bio img {
+            margin: 0; } }
