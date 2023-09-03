@@ -119,18 +119,16 @@ a {
   background: var(--color-background);
   position: sticky;
   top: 0;
-  min-height: 12vh;
+  height: 12vh;
   width: 100%;
   z-index: 40;
-  margin: 10 auto 0;
-  padding: 10px; }
-  #header #navbar {
+  margin: 0 0 10px 0; }
+  #header .head-container {
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    max-width: 1280px;
-    margin: auto; }
-    #header #navbar .logo-back {
+    align-items: center;
+    padding: 1rem 0 1rem 0.5rem; }
+    #header .head-container .logo-back {
       background-color: #131830;
       border-radius: 50%;
       width: 85px;
@@ -139,14 +137,14 @@ a {
       align-items: center;
       justify-content: center;
       box-shadow: 0 0 8px 1px var(--color-accent-medium); }
-      #header #navbar .logo-back .logo {
+      #header .head-container .logo-back #logo {
         width: 45px; }
-    #header #navbar .right-nav {
+    #header .head-container .right-header {
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end; }
-      #header #navbar .right-nav #theme-switch {
+      #header .head-container .right-header #theme-switch {
         right: 2rem;
         width: 110px;
         font-size: 0.9rem;
@@ -157,21 +155,21 @@ a {
         letter-spacing: 1px;
         text-align: center;
         cursor: pointer; }
-      #header #navbar .right-nav ul {
+      #header .head-container .right-header #navbar {
         display: flex;
         justify-content: space-between;
         font-size: 1.2rem;
         width: 500px;
         padding: 0.5rem 0; }
-        #header #navbar .right-nav ul li {
+        #header .head-container .right-header #navbar li {
           color: var(--color-text);
           border-bottom: 3px transparent solid;
           padding-bottom: 0.5rem;
           transition: border-color 0.5s; }
-          #header #navbar .right-nav ul li:hover {
+          #header .head-container .right-header #navbar li:hover {
             cursor: pointer;
             border-bottom: 3px var(--color-text) solid; }
-          #header #navbar .right-nav ul li.current {
+          #header .head-container .right-header #navbar li.current {
             border-bottom: 3px var(--color-accent-light) solid; }
 
 #home-landing #landing-content {
@@ -682,7 +680,7 @@ a {
   #footer .footer-content {
     height: 80px; }
     #footer .footer-content .socials {
-      width: 210px; }
+      width: 250px; }
       #footer .footer-content .socials .social-icons {
         width: 80px; }
         #footer .footer-content .socials .social-icons i {
@@ -690,13 +688,76 @@ a {
           #footer .footer-content .socials .social-icons i:hover {
             color: var(--color-accent-light); }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     display: flex;
     flex-direction: column;
     align-items: center; }
   section {
     padding: 1rem; }
+  #header {
+    background: var(--color-background);
+    position: sticky;
+    top: 0;
+    height: 12vh;
+    width: 100%;
+    z-index: 40;
+    margin: 0; }
+    #header .head-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem; }
+      #header .head-container .logo-back {
+        background-color: #131830;
+        border-radius: 50%;
+        width: 85px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 8px 1px var(--color-accent-medium); }
+        #header .head-container .logo-back #logo {
+          width: 45px; }
+      #header .head-container .right-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end; }
+        #header .head-container .right-header #theme-switch {
+          right: 2rem;
+          width: 110px;
+          font-size: 0.9rem;
+          background: #f8f8f8;
+          color: #131830;
+          opacity: 0.8;
+          border-radius: 10px 0px 0px 10px;
+          letter-spacing: 1px;
+          text-align: center;
+          cursor: pointer; }
+        #header .head-container .right-header #navbar {
+          position: fixed;
+          inset: 0 0 0 40%;
+          background: rgba(26, 40, 102, 0.8);
+          backdrop-filter: blur(0.5rem);
+          flex-direction: column;
+          padding: 8rem 2rem;
+          text-align: left;
+          justify-content: flex-start;
+          font-size: 1.2rem;
+          width: 500px; }
+          #header .head-container .right-header #navbar li {
+            color: #f8f8f8;
+            border-bottom: 3px transparent solid;
+            padding-bottom: 0.5rem;
+            transition: border-color 0.5s;
+            width: 4em;
+            margin-bottom: 2rem; }
+            #header .head-container .right-header #navbar li:hover {
+              cursor: pointer;
+              border-bottom: 3px var(--color-text) solid; }
+            #header .head-container .right-header #navbar li.current {
+              border-bottom: 3px var(--color-accent-light) solid; }
   #about-bio #bio-card {
     display: flex;
     flex-direction: column;

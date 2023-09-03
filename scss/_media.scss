@@ -1,4 +1,4 @@
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
   body {
     display: flex;
     flex-direction: column;
@@ -7,6 +7,91 @@
 
   section {
     padding: 1rem;
+  }
+
+  #header {
+    background: var(--color-background);
+    position: sticky;
+    top: 0;
+    height: 12vh;
+    width: 100%;
+    z-index: 40;
+    margin: 0;
+
+    .head-container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 1rem;
+
+      .logo-back {
+        background-color: #131830;
+        border-radius: 50%;
+        width: 85px;
+        height: 75px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 0 8px 1px var(--color-accent-medium);
+
+        #logo {
+          width: 45px;
+        }
+      }
+
+      .right-header {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        #theme-switch {
+          right: 2rem;
+          width: 110px;
+          font-size: 0.9rem;
+          background: #f8f8f8;
+          color: #131830;
+
+          opacity: 0.8;
+          border-radius: 10px 0px 0px 10px;
+          letter-spacing: 1px;
+          text-align: center;
+          cursor: pointer;
+        }
+
+        #navbar {
+          position: fixed;
+          inset: 0 0 0 40%;
+          background: hsla(229, 60%, 25%, 0.8);
+          backdrop-filter: blur(0.5rem);
+          // display: none;
+          flex-direction: column;
+          padding: 8rem 2rem;
+          text-align: left;
+          justify-content: flex-start;
+          font-size: 1.2rem;
+          width: 500px;
+
+          li {
+            color: #f8f8f8;
+            border-bottom: 3px transparent solid;
+            padding-bottom: 0.5rem;
+            transition: border-color 0.5s;
+            width: 4em;
+            margin-bottom: 2rem;
+
+            &:hover {
+              cursor: pointer;
+              border-bottom: 3px var(--color-text) solid;
+            }
+
+            &.current {
+              border-bottom: 3px var(--color-accent-light) solid;
+            }
+          }
+        }
+      }
+    }
   }
 
   #about {
@@ -163,5 +248,8 @@
         }
       }
     }
+  }
+
+  #contact {
   }
 }
