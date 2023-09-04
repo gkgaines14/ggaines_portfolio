@@ -42,8 +42,24 @@
       .right-header {
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        // justify-content: space-evenly;
         align-items: flex-end;
+        // position: relative;
+
+        #nav-btn {
+          display: block;
+          // position: absolute;
+          // top: 5rem;
+          // right: 1rem;
+          z-index: 99;
+          width: 40px;
+          height: 40px;
+          margin-top: 1rem;
+
+          i {
+            font-size: 1.9rem;
+          }
+        }
 
         #theme-switch {
           right: 2rem;
@@ -60,9 +76,10 @@
         }
 
         #navbar {
+          // display: none;
           position: fixed;
           inset: 0 0 0 40%;
-          background: hsla(229, 60%, 25%, 0.8);
+          background: hsla(133, 50%, 45%, 0.8);
           backdrop-filter: blur(0.5rem);
           // display: none;
           flex-direction: column;
@@ -71,6 +88,7 @@
           justify-content: flex-start;
           font-size: 1.2rem;
           width: 500px;
+          z-index: 4;
 
           li {
             color: #f8f8f8;
@@ -86,7 +104,7 @@
             }
 
             &.current {
-              border-bottom: 3px var(--color-accent-light) solid;
+              border-bottom: 3px var(--color-primary2) solid;
             }
           }
         }

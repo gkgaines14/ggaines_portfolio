@@ -144,6 +144,8 @@ a {
       flex-direction: column;
       justify-content: center;
       align-items: flex-end; }
+      #header .head-container .right-header #nav-btn {
+        display: none; }
       #header .head-container .right-header #theme-switch {
         right: 2rem;
         width: 110px;
@@ -154,7 +156,8 @@ a {
         border-radius: 10px 0px 0px 10px;
         letter-spacing: 1px;
         text-align: center;
-        cursor: pointer; }
+        cursor: pointer;
+        z-index: 99999; }
       #header .head-container .right-header #navbar {
         display: flex;
         justify-content: space-between;
@@ -722,8 +725,15 @@ a {
       #header .head-container .right-header {
         display: flex;
         flex-direction: column;
-        justify-content: center;
         align-items: flex-end; }
+        #header .head-container .right-header #nav-btn {
+          display: block;
+          z-index: 99;
+          width: 40px;
+          height: 40px;
+          margin-top: 1rem; }
+          #header .head-container .right-header #nav-btn i {
+            font-size: 1.9rem; }
         #header .head-container .right-header #theme-switch {
           right: 2rem;
           width: 110px;
@@ -738,14 +748,15 @@ a {
         #header .head-container .right-header #navbar {
           position: fixed;
           inset: 0 0 0 40%;
-          background: rgba(26, 40, 102, 0.8);
+          background: rgba(57, 172, 82, 0.8);
           backdrop-filter: blur(0.5rem);
           flex-direction: column;
           padding: 8rem 2rem;
           text-align: left;
           justify-content: flex-start;
           font-size: 1.2rem;
-          width: 500px; }
+          width: 500px;
+          z-index: 4; }
           #header .head-container .right-header #navbar li {
             color: #f8f8f8;
             border-bottom: 3px transparent solid;
@@ -757,7 +768,7 @@ a {
               cursor: pointer;
               border-bottom: 3px var(--color-text) solid; }
             #header .head-container .right-header #navbar li.current {
-              border-bottom: 3px var(--color-accent-light) solid; }
+              border-bottom: 3px var(--color-primary2) solid; }
   #about-bio #bio-card {
     display: flex;
     flex-direction: column;
