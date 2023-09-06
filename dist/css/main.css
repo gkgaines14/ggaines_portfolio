@@ -63,6 +63,9 @@
   .btn-light:hover {
     background: #28af60; }
 
+.invisible {
+  display: none; }
+
 :root {
   --color-text: #f8f8f8;
   --color-background: #131830;
@@ -97,7 +100,8 @@ body {
   font-family: 'Dosis', sans-serif;
   line-height: 1.6;
   font-size: 14pt;
-  letter-spacing: 0.8px; }
+  letter-spacing: 0.8px;
+  overflow-x: hidden; }
 
 a {
   display: inline-block;
@@ -119,7 +123,7 @@ a {
   background: var(--color-background);
   position: sticky;
   top: 0;
-  height: 12vh;
+  height: 110px;
   width: 100%;
   z-index: 40;
   margin: 0 0 10px 0; }
@@ -702,7 +706,7 @@ a {
     background: var(--color-background);
     position: sticky;
     top: 0;
-    height: 12vh;
+    height: 110px;
     width: 100%;
     z-index: 40;
     margin: 0; }
@@ -727,13 +731,37 @@ a {
         flex-direction: column;
         align-items: flex-end; }
         #header .head-container .right-header #nav-btn {
-          display: block;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.6rem;
           z-index: 99;
-          width: 40px;
-          height: 40px;
-          margin-top: 1rem; }
-          #header .head-container .right-header #nav-btn i {
-            font-size: 1.9rem; }
+          width: 50px;
+          height: 50px;
+          margin-top: 1rem;
+          position: relative;
+          overflow: hidden; }
+          #header .head-container .right-header #nav-btn #b1,
+          #header .head-container .right-header #nav-btn #b2,
+          #header .head-container .right-header #nav-btn #b3 {
+            position: absolute;
+            top: 46%;
+            left: 10%; }
+          #header .head-container .right-header #nav-btn .menu-bar {
+            width: 40px;
+            background: var(--color-text);
+            height: 5px;
+            border-radius: 10px; }
+          #header .head-container .right-header #nav-btn .top-shift {
+            transform: rotate(45deg);
+            transform-origin: center;
+            transition: 300ms ease-in-out; }
+          #header .head-container .right-header #nav-btn .bottom-shift {
+            width: 40px;
+            transform: rotate(-45deg);
+            transform-origin: center;
+            transition: 300ms ease-in-out; }
         #header .head-container .right-header #theme-switch {
           right: 2rem;
           width: 110px;
@@ -746,17 +774,20 @@ a {
           text-align: center;
           cursor: pointer; }
         #header .head-container .right-header #navbar {
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          justify-content: flex-start;
           position: fixed;
           inset: 0 0 0 40%;
           background: rgba(57, 172, 82, 0.8);
           backdrop-filter: blur(0.5rem);
-          flex-direction: column;
           padding: 8rem 2rem;
-          text-align: left;
-          justify-content: flex-start;
           font-size: 1.2rem;
           width: 500px;
-          z-index: 4; }
+          z-index: 4;
+          transition: transform 0.6s ease-out;
+          transform: translateX(100%); }
           #header .head-container .right-header #navbar li {
             color: #f8f8f8;
             border-bottom: 3px transparent solid;

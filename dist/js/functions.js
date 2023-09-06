@@ -45,6 +45,18 @@ export const setTheme = (themeSetting) => {
 };
 
 export const loadListeners = () => {
+  //Load universal elements
+  const navbar = document.querySelector('#navbar');
+  const navButton = document.querySelector('#nav-btn');
+  const menuIcon = document.querySelector('#menu-icon');
+  const topBar = document.querySelector('#top-bar');
+  const middleBar = document.querySelector('#middle-bar');
+  const bottomBar = document.querySelector('#bottom-bar');
+  const b1 = document.querySelector('#b1');
+  const b2 = document.querySelector('#b2');
+  const b3 = document.querySelector('#b3');
+  const header = document.querySelector('#header');
+
   //Theme Switch Button
   document.querySelector('#theme-switch').onclick = () => {
     if (localStorage.getItem('theme') === 'dark') {
@@ -55,13 +67,48 @@ export const loadListeners = () => {
     setTheme(localStorage.getItem('theme'));
   };
 
-  //Bottom border for fixed navbar
+  //Bottom border for fixed header
   document.addEventListener('scroll', (e) => {
     if (window.scrollY != 0) {
       header.classList.add('header-border');
       console.log(window.scrollY);
     } else {
       header.classList.remove('header-border');
+    }
+  });
+
+  navButton.addEventListener('click', () => {
+    //Open
+    if (navbar.dataset.open === 'false') {
+      navbar.dataset.open = 'true';
+      navbar.style.transform = 'translateX(0%)';
+
+      topBar.style.opacity = '0';
+      b1.className = 'menu-bar top-shift';
+      b2.style.opacity = '0';
+      b3.className = 'menu-bar bottom-shift';
+      bottomBar.style.opacity = '0';
+
+      // navbar.style.display = 'flex';
+      // navButton.style.display = 'block';
+      // middleBar.style.display = 'none';
+      // topBar.style.transform = 'rotate(45deg)';
+      // topBar.style.transformOrigin = 'top left';
+      // bottomBar.style.transform = 'rotate(-45deg)';
+      // bottomBar.className = 'menu-bar bottom-tilt';
+      // topBar.className = 'menu-bar top-tilt';
+      // menuIcon.className = 'fa-solid fa-xmark';
+    } else {
+      //Closed
+      navbar.dataset.open = 'false';
+      navbar.style.transform = 'translateX(100%)';
+      setTimeout(() => {
+        topBar.style.opacity = '1';
+        b1.className = '';
+        b2.style.opacity = '1';
+        b3.className = '';
+        bottomBar.style.opacity = '1';
+      }, 200);
     }
   });
 };

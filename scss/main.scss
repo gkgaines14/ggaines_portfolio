@@ -43,6 +43,7 @@ body {
 
   font-size: 14pt;
   letter-spacing: 0.8px;
+  overflow-x: hidden;
 }
 
 a {
@@ -74,7 +75,7 @@ a {
   background: var(--color-background);
   position: sticky;
   top: 0;
-  height: 12vh;
+  height: 110px;
   width: 100%;
   z-index: 40;
   margin: 0 0 10px 0;
@@ -151,85 +152,6 @@ a {
     }
   }
 }
-
-// #header {
-//   background: var(--color-background);
-//   position: sticky;
-//   top: 0;
-//   min-height: 12vh;
-//   width: 100%;
-//   z-index: 40;
-//   margin: 10 auto 0;
-//   padding: 10px;
-
-//   #navbar {
-//     display: flex;
-//     align-items: center;
-//     justify-content: space-between;
-//     max-width: $website-width;
-//     margin: auto;
-
-//     .logo-back {
-//       background-color: #131830;
-//       border-radius: 50%;
-//       width: 85px;
-//       height: 75px;
-//       display: flex;
-//       align-items: center;
-//       justify-content: center;
-//       box-shadow: 0 0 8px 1px var(--color-accent-medium);
-
-//       .logo {
-//         width: 45px;
-//       }
-//     }
-
-//     .right-header {
-//       display: flex;
-//       flex-direction: column;
-//       justify-content: center;
-//       align-items: flex-end;
-
-//       #theme-switch {
-//         right: 2rem;
-//         width: 110px;
-//         font-size: 0.9rem;
-//         background: #f8f8f8;
-//         color: #131830;
-
-//         opacity: 0.8;
-//         border-radius: 10px 0px 0px 10px;
-//         letter-spacing: 1px;
-//         text-align: center;
-//         cursor: pointer;
-//       }
-
-//       ul {
-//         display: flex;
-//         justify-content: space-between;
-//         font-size: 1.2rem;
-//         width: 500px;
-//         padding: 0.5rem 0;
-
-//         li {
-//           color: var(--color-text);
-//           border-bottom: 3px transparent solid;
-//           padding-bottom: 0.5rem;
-//           transition: border-color 0.5s;
-
-//           &:hover {
-//             cursor: pointer;
-//             border-bottom: 3px var(--color-text) solid;
-//           }
-
-//           &.current {
-//             border-bottom: 3px var(--color-accent-light) solid;
-//           }
-//         }
-//       }
-//     }
-//   }
-// }
 
 //Home Page-------------------------------------------------------
 

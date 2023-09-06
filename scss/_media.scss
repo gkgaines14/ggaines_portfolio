@@ -13,7 +13,7 @@
     background: var(--color-background);
     position: sticky;
     top: 0;
-    height: 12vh;
+    height: 110px;
     width: 100%;
     z-index: 40;
     margin: 0;
@@ -47,18 +47,51 @@
         // position: relative;
 
         #nav-btn {
-          display: block;
-          // position: absolute;
-          // top: 5rem;
-          // right: 1rem;
-          z-index: 99;
-          width: 40px;
-          height: 40px;
-          margin-top: 1rem;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: space-between;
+          padding: 0.6rem;
 
-          i {
-            font-size: 1.9rem;
+          z-index: 99;
+          width: 50px;
+          height: 50px;
+          margin-top: 1rem;
+          position: relative;
+          overflow: hidden;
+
+          #b1,
+          #b2,
+          #b3 {
+            position: absolute;
+            top: 46%;
+            left: 10%;
           }
+          .menu-bar {
+            width: 40px;
+            background: var(--color-text);
+            height: 5px;
+            border-radius: 10px;
+          }
+
+          .top-shift {
+            // width: 60px;
+            transform: rotate(45deg);
+            transform-origin: center;
+            transition: 300ms ease-in-out;
+          }
+
+          .bottom-shift {
+            width: 40px;
+
+            transform: rotate(-45deg);
+            transform-origin: center;
+            transition: 300ms ease-in-out;
+          }
+
+          // i {
+          //   font-size: 1.9rem;
+          // }
         }
 
         #theme-switch {
@@ -76,19 +109,20 @@
         }
 
         #navbar {
-          // display: none;
+          display: flex;
+          flex-direction: column;
+          text-align: left;
+          justify-content: flex-start;
           position: fixed;
           inset: 0 0 0 40%;
           background: hsla(133, 50%, 45%, 0.8);
           backdrop-filter: blur(0.5rem);
-          // display: none;
-          flex-direction: column;
           padding: 8rem 2rem;
-          text-align: left;
-          justify-content: flex-start;
           font-size: 1.2rem;
           width: 500px;
           z-index: 4;
+          transition: transform 0.6s ease-out;
+          transform: translateX(100%);
 
           li {
             color: #f8f8f8;

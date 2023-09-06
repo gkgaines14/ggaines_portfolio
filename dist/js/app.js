@@ -126,6 +126,7 @@ const launchWork = (page) => {
     appsTab.className = 'tab';
     codeTab.className = 'tab active-tab';
   });
+  // const header = document.querySelector('#header');
 };
 
 //Contact Script
