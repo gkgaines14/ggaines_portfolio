@@ -6,7 +6,7 @@
   }
 
   section {
-    padding: 1rem;
+    padding: 0 1rem;
   }
 
   #header {
@@ -146,6 +146,31 @@
     }
   }
 
+  #home {
+    &-landing {
+      #landing-content {
+        flex-direction: column;
+        justify-content: space-evenly;
+
+        #intro-message {
+          width: auto;
+
+          .label-box {
+            text-align: center;
+          }
+
+          .my-name {
+            text-align: center;
+          }
+        }
+
+        #headshot-card {
+          display: none;
+        }
+      }
+    }
+  }
+
   #about {
     &-bio {
       #bio-card {
@@ -164,9 +189,17 @@
           border-bottom: 2px solid var(--color-accent-medium);
         }
 
+        #bio-pic {
+          display: none;
+        }
+
+        #bio-pic-mobile {
+          display: block;
+        }
+
         #bio-text {
           border-left: none;
-          height: 600px;
+          height: auto;
 
           p {
             padding: 0 0 1rem 1rem;
@@ -302,6 +335,33 @@
     }
   }
 
+  #work {
+    #project-tiles {
+      padding: 0 10rem;
+    }
+  }
+
   #contact {
+    &-input {
+      .light-box {
+        #cont-card {
+          width: 100%;
+
+          #cont-info {
+            width: 100%;
+          }
+
+          .mail-icon-box {
+            position: static;
+            margin: 3rem 0;
+            height: 250px;
+          }
+
+          .confirm-message {
+            display: none;
+          }
+        }
+      }
+    }
   }
 }

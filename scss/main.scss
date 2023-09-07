@@ -160,7 +160,7 @@ a {
     #landing-content {
       display: flex;
       justify-content: space-between;
-      height: 87vh;
+      min-height: 800px;
       width: 100%;
       overflow: hidden;
 
@@ -259,58 +259,74 @@ a {
     border-top: 3px solid var(--color-accent-medium);
     text-align: center;
 
+    #spec-intro {
+      // height: 300px;
+      margin-bottom: 6rem;
+    }
+
     #specials {
       display: flex;
-      justify-content: space-evenly;
-      margin-top: 6rem;
+      // align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
+      // width: 80%;
+      // margin-top: 6rem;
 
-      .spec-item {
-        min-width: 300px;
-        height: 475px;
-        background: #1c2446;
-        border: solid 3px var(--color-accent-light);
-        border-radius: 10px;
-        margin: 0.6rem;
-        padding: 1.1rem;
-        position: relative;
+      .spec-group {
         display: flex;
-        flex-direction: column;
-        font-size: 14pt;
-        // justify-content: flex-end;
+        justify-content: center;
+        flex-wrap: wrap;
 
-        .spec-desc {
-          height: 205px;
-          // margin-top: 2rem;
+        .spec-item {
+          // width: auto;
+          width: 300px;
+          // max-width: 500px;
+          height: 475px;
+          background: #1c2446;
+          border: solid 3px var(--color-accent-light);
+          border-radius: 10px;
+          margin: 0.6rem 0.6rem 6rem;
+          padding: 1.1rem;
+          position: relative;
+          display: flex;
+          flex-direction: column;
+          font-size: 14pt;
+          // justify-content: flex-end;
 
-          // p.center-middle {
-          //   height: 100px;
-          // }
+          .spec-desc {
+            height: 205px;
+            // margin-top: 2rem;
 
-          // .spec-item-desc {
-          //   // text-align: left;
-          // }
-        }
+            // p.center-middle {
+            //   height: 100px;
+            // }
 
-        .icon-frame {
-          position: absolute;
-          top: -17%;
-          left: 28%;
-          background: var(--color-accent-light);
-          border-radius: 50%;
-          width: 130px;
-          height: 130px;
-
-          i {
-            color: #f8f8f8;
-            // font-weight: 400;
-            // align-items: center;
-            // padding: 1.6rem;
+            // .spec-item-desc {
+            //   // text-align: left;
+            // }
           }
-        }
 
-        .label-frame {
-          height: 90px;
-          margin: 3rem 0 0.5rem;
+          .icon-frame {
+            position: absolute;
+            top: -17%;
+            left: 28%;
+            background: var(--color-accent-light);
+            border-radius: 50%;
+            width: 130px;
+            height: 130px;
+
+            i {
+              color: #f8f8f8;
+              // font-weight: 400;
+              // align-items: center;
+              // padding: 1.6rem;
+            }
+          }
+
+          .label-frame {
+            height: 90px;
+            margin: 3rem 0 0.5rem;
+          }
         }
       }
     }
@@ -322,8 +338,9 @@ a {
 
   &-approach {
     border-top: 3px solid var(--color-accent-medium);
-    height: 500px;
+    // height: 500px;
     text-align: center;
+    margin-bottom: 2rem;
 
     p {
       text-align: left;
@@ -339,17 +356,28 @@ a {
 
     #bio-card {
       display: flex;
+      align-items: center;
+      justify-content: center;
       margin-top: 2rem;
+      // flex-wrap: wrap;
 
       img {
         // width: 900px;
-        height: 600px;
+        // width: 40%;
+        height: 650px;
         margin-right: 2rem;
+      }
+
+      #bio-pic-mobile {
+        display: none;
       }
 
       #bio-text {
         border-left: 2px solid var(--color-accent-medium);
-        height: 600px;
+        min-height: 600px;
+        height: auto;
+        min-width: 500px;
+        max-width: 750px;
 
         p {
           padding: 0 0 1rem 2rem;
@@ -619,7 +647,7 @@ a {
 
 #work {
   &-portfolio {
-    min-height: 900px;
+    // min-height: 900px;
     text-align: center;
 
     #tabs {
@@ -758,7 +786,7 @@ a {
   text-align: center;
 
   &-input {
-    height: 100vh;
+    // min-height: 100vh;
 
     .light-box {
       background-color: var(--color-primary2);
