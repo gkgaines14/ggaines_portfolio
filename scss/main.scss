@@ -111,19 +111,42 @@ a {
         display: none;
       }
 
+      // Theme Switch Button
       #theme-switch {
-        right: 2rem;
-        width: 110px;
-        font-size: 0.9rem;
+        // right: 2rem;
+        width: 160px;
+        height: 26px;
+        font-size: 1rem;
         background: #f8f8f8;
         color: #131830;
 
         opacity: 0.8;
-        border-radius: 10px 0px 0px 10px;
+        border-radius: 15px;
         letter-spacing: 1px;
         text-align: center;
         cursor: pointer;
         z-index: 99999;
+        margin-bottom: 0.5rem;
+        // display: flex;
+        // justify-content: center;
+        // align-items: center;
+        position: relative;
+
+        #theme-text {
+          padding-top: 1px;
+        }
+
+        #orb {
+          // background-color: green;
+          background: var(--color-background);
+          border-radius: 50%;
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          top: 2.5px;
+          margin: 0 5px;
+          transition: transform ease-in 400ms;
+        }
       }
 
       #navbar {
