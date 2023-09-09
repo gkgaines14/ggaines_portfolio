@@ -5,8 +5,12 @@
     align-items: center;
   }
 
-  section {
-    padding: 0 1rem;
+  // section {
+  //   padding: 0 1rem;
+  // }
+
+  .container {
+    max-width: 100vw;
   }
 
   #header {
@@ -178,7 +182,8 @@
         flex-direction: column;
         align-items: center;
         margin: 0;
-        padding: 0;
+        padding: 1rem;
+        width: 100vw;
 
         img {
           width: 100%;
@@ -202,7 +207,7 @@
           height: auto;
 
           p {
-            padding: 0 0 1rem 1rem;
+            padding: 0 0 0 0.5rem;
             text-align: left;
           }
         }
@@ -213,12 +218,13 @@
       height: auto;
 
       #exp-text {
-        padding: 2rem 0 1rem 1rem;
+        padding: 2rem 1rem 1rem 2rem;
         text-align: left;
       }
 
       #resume {
         // display: inline-block;
+        padding: 0 1rem;
       }
 
       #timeline {
@@ -300,12 +306,13 @@
 
       #test-intro {
         text-align: left;
-        padding: 2rem 0 1rem 1rem;
+        padding: 2rem 0.5rem 1rem 1.5rem;
       }
 
       .test-card {
         flex-direction: column;
         // width: 90%;
+        padding: 0 2rem;
 
         .test-tile {
           height: auto;
@@ -324,10 +331,14 @@
           .test-bio {
             width: 100%;
             justify-content: space-between;
-            padding: 0.5rem;
+            // padding: 0.5rem;
 
             img {
               margin: 0;
+            }
+
+            .test-info {
+              width: 50%;
             }
           }
         }
