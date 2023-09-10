@@ -152,6 +152,26 @@
         }
       }
     }
+    &-special {
+      #skills {
+        .skills-list {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-wrap: wrap;
+          // height: 150px;
+          padding: 2rem 0.5rem;
+          .skills-group {
+            justify-content: center;
+            .skill-item {
+              .skill-name {
+                width: 300px;
+              }
+            }
+          }
+        }
+      }
+    }
   }
 
   #about {
