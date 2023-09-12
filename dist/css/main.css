@@ -61,7 +61,8 @@
   background: #2a7a4a;
   color: white; }
   .btn-light:hover {
-    background: #28af60; }
+    background: #28af60;
+    box-shadow: 0 0 10px 1px rgba(27, 59, 27, 0.906); }
 
 .invisible {
   display: none; }
@@ -202,7 +203,8 @@ a {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 50%; }
+    width: 50%;
+    padding-left: 1rem; }
     #home-landing #landing-content #intro-message .label-box {
       color: var(--color-text); }
     #home-landing #landing-content #intro-message .my-name {
