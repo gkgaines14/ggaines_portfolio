@@ -552,23 +552,27 @@ a {
   &-experience {
     background: var(--color-primary2);
     color: #f8f8f8;
-    height: 1000px;
+    height: 1100px;
     width: 100%;
     border-top: 3px solid var(--color-accent-medium);
     text-align: center;
 
+    #exp-text {
+      margin-bottom: 2rem;
+    }
+
     #timeline {
       display: flex;
       align-items: center;
-      height: 650px;
+      height: 800px;
       width: 100%;
       position: relative;
       margin-top: 3rem;
 
       #grid-card {
         display: grid;
-        grid-template-rows: 280px 100px 280px;
-        grid-template-columns: repeat(5, 240px);
+        grid-template-rows: 360px 80px 360px;
+        grid-template-columns: repeat(5, 230px);
         grid-template-areas:
           't1 t1 t3 t4 t5'
           'd1 d2 d3 d4 d5'
@@ -666,8 +670,8 @@ a {
         }
 
         .exp-item {
-          height: 300px;
-          width: 340px;
+          height: 360px;
+          width: 370px;
           padding-left: 1rem;
           overflow: hidden;
           font-size: 13pt;
