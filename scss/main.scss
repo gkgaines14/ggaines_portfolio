@@ -189,21 +189,32 @@ a {
         justify-content: center;
         width: 50%;
         padding-left: 1rem;
+        .upper-message {
+          .label-box {
+            color: var(--color-text);
+          }
 
-        .label-box {
-          color: var(--color-text);
-        }
-
-        .my-name {
-          font-size: 4rem;
-          font-weight: 800;
-          margin: 1rem 0;
-          font-family: 'Roboto', sans-serif;
+          .my-name {
+            font-size: 4rem;
+            font-weight: 800;
+            margin: 1rem 0;
+            font-family: 'Roboto', sans-serif;
+          }
+          img {
+            display: none;
+            width: 8%;
+            height: 8%;
+          }
         }
         p {
           margin-bottom: 4rem;
           font-size: 1.3rem;
           word-spacing: 4px;
+        }
+        #learn-more {
+          i {
+            margin-left: 0.5rem;
+          }
         }
       }
 
@@ -282,7 +293,7 @@ a {
 
     #spec-intro {
       // height: 300px;
-      margin-bottom: 6rem;
+      margin-bottom: 8rem;
     }
 
     #specials {

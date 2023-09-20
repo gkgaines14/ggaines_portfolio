@@ -55,17 +55,17 @@
   width: 160px;
   height: 50px;
   padding: 0.8rem 1.4rem;
-  transition: 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
   cursor: pointer; }
 
 .btn-light {
-  background: #2a7a4a;
+  background-color: #2a7a4a;
   color: white; }
   .btn-light:hover {
-    background: #28af60;
+    background-color: #28af60;
     box-shadow: 0 0 10px 1px rgba(27, 59, 27, 0.906); }
 
 .invisible {
@@ -209,17 +209,23 @@ a {
     justify-content: center;
     width: 50%;
     padding-left: 1rem; }
-    #home-landing #landing-content #intro-message .label-box {
+    #home-landing #landing-content #intro-message .upper-message .label-box {
       color: var(--color-text); }
-    #home-landing #landing-content #intro-message .my-name {
+    #home-landing #landing-content #intro-message .upper-message .my-name {
       font-size: 4rem;
       font-weight: 800;
       margin: 1rem 0;
       font-family: 'Roboto', sans-serif; }
+    #home-landing #landing-content #intro-message .upper-message img {
+      display: none;
+      width: 8%;
+      height: 8%; }
     #home-landing #landing-content #intro-message p {
       margin-bottom: 4rem;
       font-size: 1.3rem;
       word-spacing: 4px; }
+    #home-landing #landing-content #intro-message #learn-more i {
+      margin-left: 0.5rem; }
   #home-landing #landing-content #headshot-card {
     width: 50%;
     display: flex;
@@ -260,7 +266,7 @@ a {
   border-top: 3px solid var(--color-accent-medium);
   text-align: center; }
   #home-special #spec-intro {
-    margin-bottom: 6rem; }
+    margin-bottom: 8rem; }
   #home-special #specials {
     display: flex;
     justify-content: center;
@@ -926,41 +932,69 @@ a {
             border-bottom: 3px var(--color-primary2) solid; }
   #home-landing #landing-content {
     flex-direction: column;
-    height: 850px; }
+    height: 1080px; }
     #home-landing #landing-content #intro-message {
       width: auto;
       padding: 0;
       align-items: center;
       text-align: center;
-      height: 800px;
       justify-content: space-between; }
       #home-landing #landing-content #intro-message .upper-message {
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: space-between;
-        background: linear-gradient(var(--color-background) 0%, var(--color-accent-medium) 28%, var(--color-accent-medium) 38%, var(--color-background) 82%);
-        height: 280px;
-        padding-top: 3rem; }
+        background: url("/dist/img/GregHeadshot_right_v3 copy.jpg") no-repeat;
+        background-position: top -95px right 0px;
+        background-size: 100%;
+        height: 400px;
+        padding-top: 1rem;
+        margin: 1rem 0 2rem;
+        position: relative;
+        border-bottom: solid 4px var(--color-accent-medium); }
         #home-landing #landing-content #intro-message .upper-message .label-box {
           color: #f8f8f8;
           font-size: 1.7rem;
-          text-align: center;
-          padding: 0 1rem; }
+          text-align: left;
+          padding: 0 1rem;
+          z-index: 5; }
         #home-landing #landing-content #intro-message .upper-message .my-name {
+          color: #f8f8f8;
           font-size: 2.7rem;
-          text-align: left; }
+          text-align: left;
+          z-index: 5;
+          width: 40px;
+          padding: 0 1rem;
+          margin-top: 2rem; }
+        #home-landing #landing-content #intro-message .upper-message img {
+          display: block;
+          margin: 4rem 0 0 1rem;
+          opacity: 0.8;
+          z-index: 5; }
+      #home-landing #landing-content #intro-message .upper-message::after {
+        content: '';
+        background: linear-gradient(310deg, var(--color-accent-medium) 38%, #131830 82%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 4;
+        opacity: 0.4; }
       #home-landing #landing-content #intro-message p {
         font-size: 1.3rem;
-        word-spacing: 0.4rem;
+        letter-spacing: 0.15rem;
         text-align: left;
-        text-align: center;
-        padding: 0 2rem;
-        width: 100%; }
+        padding: 0 1.5rem;
+        width: 100%;
+        margin-bottom: 2rem; }
+      #home-landing #landing-content #intro-message #learn-more {
+        width: 90%;
+        justify-content: center; }
     #home-landing #landing-content #headshot-card {
       display: none; }
   #home-special {
     padding: 1rem; }
+    #home-special #spec-intro {
+      margin-bottom: 5rem; }
     #home-special #specials .spec-group .spec-item {
       padding: 1.1rem 1.1rem 1.5rem; }
       #home-special #specials .spec-group .spec-item .icon-frame {
@@ -980,6 +1014,9 @@ a {
         justify-content: center; }
         #home-special #skills .skills-list .skills-group .skill-item .skill-name {
           width: 300px; }
+    #home-special #portfolio-btn {
+      width: 98%;
+      justify-content: center; }
   #home-approach {
     padding: 1rem; }
   #about-bio #bio-card {
@@ -996,8 +1033,6 @@ a {
       padding-bottom: 2rem;
       object-fit: contain;
       border-bottom: 2px solid var(--color-accent-medium); }
-    #about-bio #bio-card #bio-pic {
-      display: none; }
     #about-bio #bio-card #bio-pic-mobile {
       display: block; }
     #about-bio #bio-card #bio-text {

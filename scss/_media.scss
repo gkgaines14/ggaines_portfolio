@@ -137,53 +137,98 @@
     &-landing {
       #landing-content {
         flex-direction: column;
-        // justify-content: space-evenly;
-        height: 850px;
+        height: 1080px;
+        // margin-bottom: 2rem;
 
         #intro-message {
           width: auto;
           padding: 0;
           align-items: center;
           text-align: center;
-          height: 800px;
+          // height: 800px;
           justify-content: space-between;
-          // margin-bottom: 3rem;
 
           .upper-message {
             display: flex;
             flex-direction: column;
-            align-items: center;
-            justify-content: space-between;
+            // align-items: center;
+            background: url('/dist/img/GregHeadshot_right_v3\ copy.jpg')
+              no-repeat;
+            background-position: top -95px right 0px;
+            background-size: 100%;
             // background: red;
-            background: linear-gradient(
-              var(--color-background) 0%,
-              var(--color-accent-medium) 28%,
-              var(--color-accent-medium) 38%,
-              var(--color-background) 82%
-            );
-            height: 280px;
-            padding-top: 3rem;
+            // background: linear-gradient(
+            //   var(--color-background) 0%,
+            //   var(--color-accent-medium) 28%,
+            //   var(--color-accent-medium) 38%,
+            //   var(--color-background) 82%
+            // );
+            height: 400px;
+            padding-top: 1rem;
+            margin: 1rem 0 2rem;
+            position: relative;
+            // z-index: 0;
+            border-bottom: solid 4px var(--color-accent-medium);
 
             .label-box {
               color: #f8f8f8;
               font-size: 1.7rem;
-              text-align: center;
+              text-align: left;
               padding: 0 1rem;
+              z-index: 5;
             }
 
             .my-name {
+              color: #f8f8f8;
               font-size: 2.7rem;
               text-align: left;
+              z-index: 5;
+              width: 40px;
+              padding: 0 1rem;
+              margin-top: 2rem;
+            }
+            img {
+              display: block;
+              margin: 4rem 0 0 1rem;
+              opacity: 0.8;
+              z-index: 5;
             }
           }
+
+          .upper-message::after {
+            content: '';
+            // background: var(--color-accent-medium);
+            background: linear-gradient(
+              310deg,
+              // to right,
+              //  #131830 0%,
+              // var(--color-accent-medium) 28%,
+              var(--color-accent-medium) 38%,
+              #131830 82%
+            );
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 4;
+            opacity: 0.4;
+          }
+
           p {
             font-size: 1.3rem;
-            word-spacing: 0.4rem;
+            letter-spacing: 0.15rem;
             text-align: left;
-            text-align: center;
+            // text-align: center;
             // text-align: justify;
-            padding: 0 2rem;
+            padding: 0 1.5rem;
             width: 100%;
+            margin-bottom: 2rem;
+          }
+
+          #learn-more {
+            width: 90%;
+            justify-content: center;
           }
         }
 
@@ -192,8 +237,12 @@
         }
       }
     }
+
     &-special {
       padding: 1rem;
+      #spec-intro {
+        margin-bottom: 5rem;
+      }
       #specials {
         .spec-group {
           .spec-item {
@@ -211,19 +260,7 @@
             .label-frame {
               margin: 2rem 0 0.5rem;
             }
-            .spec-item-desc {
-              // height: fit-content;
-            }
           }
-          // .skill-two {
-          //   height: 400px;
-          // }
-          // .skill-three {
-          //   height: 100px;
-          // }
-          // .skill-four {
-          //   height: 300px;
-          // }
         }
       }
 
@@ -243,6 +280,11 @@
             }
           }
         }
+      }
+      #portfolio-btn {
+        width: 98%;
+        justify-content: center;
+        // margin: 3rem 1rem;
       }
     }
     &-approach {
@@ -269,9 +311,9 @@
           border-bottom: 2px solid var(--color-accent-medium);
         }
 
-        #bio-pic {
-          display: none;
-        }
+        // #bio-pic {
+        //   display: none;
+        // }
 
         #bio-pic-mobile {
           display: block;

@@ -69,7 +69,7 @@
   width: 160px;
   height: 50px;
   padding: 0.8rem 1.4rem;
-  transition: 0.5s;
+  transition: background-color 0.5s, box-shadow 0.5s;
   border: none;
   border-radius: 5px;
   font-size: 1.2rem;
@@ -79,11 +79,11 @@
 .btn {
   &-light {
     @extend %btn-all;
-    background: #2a7a4a;
+    background-color: #2a7a4a;
     color: white;
 
     &:hover {
-      background: #28af60;
+      background-color: #28af60;
       box-shadow: 0 0 10px 1px rgba(27, 59, 27, 0.906);
     }
   }
