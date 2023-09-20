@@ -179,7 +179,7 @@ a {
     #landing-content {
       display: flex;
       justify-content: space-between;
-      min-height: 800px;
+      height: 800px;
       width: 100%;
       overflow: hidden;
 
@@ -203,6 +203,7 @@ a {
         p {
           margin-bottom: 4rem;
           font-size: 1.3rem;
+          word-spacing: 4px;
         }
       }
 
@@ -301,7 +302,7 @@ a {
           // width: auto;
           width: 300px;
           // max-width: 500px;
-          height: 475px;
+          max-height: 500px;
           background: #1c2446;
           border: solid 3px var(--color-accent-medium);
           border-radius: 10px;
@@ -314,7 +315,7 @@ a {
           // justify-content: flex-end;
 
           .spec-desc {
-            height: 205px;
+            // height: 205px;
             // margin-top: 2rem;
 
             // p.center-middle {
