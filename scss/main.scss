@@ -583,7 +583,7 @@ a {
 
       #grid-card {
         display: grid;
-        grid-template-rows: 360px 80px 360px;
+        grid-template-rows: 380px 80px 380px;
         grid-template-columns: repeat(5, 230px);
         grid-template-areas:
           't1 t1 t3 t4 t5'
@@ -682,7 +682,7 @@ a {
         }
 
         .exp-item {
-          height: 360px;
+          height: 380px;
           width: 370px;
           padding-left: 1rem;
           overflow: hidden;
@@ -693,7 +693,7 @@ a {
             font-family: 'Roboto', sans-serif;
             font-weight: 700;
             font-size: 1.2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0.6rem;
             // letter-spacing: 1pt;
             // border-bottom: var(--color-accent-medium) 1px solid;
           }
