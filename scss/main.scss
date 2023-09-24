@@ -584,7 +584,7 @@ a {
       #grid-card {
         display: grid;
         grid-template-rows: $grid-height 80px $grid-height;
-        grid-template-columns: repeat(5, 230px);
+        grid-template-columns: repeat(5, 225px);
         grid-template-areas:
           't1 t1 t3 t4 t5'
           'd1 d2 d3 d4 d5'

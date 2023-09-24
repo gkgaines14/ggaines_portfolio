@@ -454,7 +454,7 @@ a {
     #about-experience #timeline #grid-card {
       display: grid;
       grid-template-rows: 400px 80px 400px;
-      grid-template-columns: repeat(5, 230px);
+      grid-template-columns: repeat(5, 225px);
       grid-template-areas: 't1 t1 t3 t4 t5' 'd1 d2 d3 d4 d5' 'b1 b2 b3 b4 b5';
       align-items: center;
       justify-content: flex-end;
