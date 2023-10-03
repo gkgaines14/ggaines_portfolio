@@ -140,3 +140,47 @@ export const loadListeners = () => {
     }
   });
 };
+
+export const formListner = () => {
+  const submitButton = document.querySelector('#submit-btn');
+
+  const confirmMessage = document.querySelector('.confirm-message');
+  const imageBack = document.querySelector('#mail-icon-glow');
+
+  submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const contactForm = document.querySelector('#cont-form');
+    const formData = new FormData(contactForm);
+
+    fetch(
+      'https://script.google.com/macros/s/AKfycbxlBdWjUXAoawIDkfNLri0ssMLr7zIpc3SpJAH1-LLBEaYc5xcPTqawYFy8aUNIcrhRNw/exec',
+      { method: 'POST', body: formData }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+
+    confirmMessage.style.opacity = '1';
+    imageBack.style.opacity = '1';
+    submitButton.style.fontSize = '1.3rem';
+    setTimeout(() => {
+      confirmMessage.style.opacity = '0';
+    }, '5000');
+    setTimeout(() => {
+      imageBack.style.opacity = '0';
+    }, '670');
+    setTimeout(() => {
+      submitButton.style.fontSize = '1.2rem';
+    }, '200');
+    setTimeout(() => {
+      document.querySelector('#name-input').value = '';
+      document.querySelector('#subject-input').value = '';
+      document.querySelector('#email-input').value = '';
+      document.querySelector('#message-input').value = '';
+    }, '5000');
+    console.log(contactForm);
+  });
+};
