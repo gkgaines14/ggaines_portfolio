@@ -150,20 +150,30 @@ const launchContact = (page) => {
 
   const header = document.querySelector('#header');
   const submitButton = document.querySelector('#submit-btn');
+
   const confirmMessage = document.querySelector('.confirm-message');
   const imageBack = document.querySelector('#mail-icon-glow');
 
-  // submitButton.addEventListener('mousedown', (e) => {
-  //   submitButton.style.width = '98%';
-  //   submitButton.style.height = '46px';
-  //   console.log('mouse is down');
-  // });
-  // submitButton.addEventListener('mouseup', (e) => {
-  //   submitButton.style.width = '100%';
-  //   submitButton.style.height = '50px';
-  //   console.log('mouse is up');
-  // });
+  function test() {
+    console.log('test');
+  }
+
   submitButton.addEventListener('click', (e) => {
+    e.preventDefault();
+
+    const contactForm = document.querySelector('#cont-form');
+    const formData = new FormData(contactForm);
+
+    fetch(
+      'https://script.google.com/macros/s/AKfycbxlBdWjUXAoawIDkfNLri0ssMLr7zIpc3SpJAH1-LLBEaYc5xcPTqawYFy8aUNIcrhRNw/exec',
+      { method: 'POST', body: formData }
+    )
+      .then((res) => res.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => console.log(error));
+
     confirmMessage.style.opacity = '1';
     imageBack.style.opacity = '1';
     submitButton.style.fontSize = '1.3rem';
@@ -176,6 +186,13 @@ const launchContact = (page) => {
     setTimeout(() => {
       submitButton.style.fontSize = '1.2rem';
     }, '200');
+    setTimeout(() => {
+      document.querySelector('#name-input').value = '';
+      document.querySelector('#subject-input').value = '';
+      document.querySelector('#email-input').value = '';
+      document.querySelector('#message-input').value = '';
+    }, '5000');
+    console.log(contactForm);
   });
 };
 

@@ -73,7 +73,7 @@
 
 :root {
   --color-text: #f8f8f8;
-  --color-background: #131830;
+  --color-background: hsl(230, 43%, 13%);
   --color-primary: #232fb3;
   --color-primary2: rgb(31, 41, 82);
   --color-dark: #191d2d;

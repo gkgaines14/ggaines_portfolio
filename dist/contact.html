@@ -68,31 +68,39 @@
               </p>
             </div>
             <div class="form-card">
-              <form id="cont-form">
+              <form id="cont-form" name="form">
                 <div id="input-fields">
                   <input
+                    id="name-input"
                     type="text"
                     class="text-input name-input"
                     placeholder="Name"
+                    name="Name"
                   />
                   <input
+                    id="subject-input"
                     type="text"
                     class="text-input subject-input"
                     placeholder="Subject"
+                    name="Subject"
                   />
                   <input
+                    id="email-input"
                     type="email"
                     class="text-input email-input"
                     placeholder="Email Address"
+                    name="Email"
                   />
                   <textarea
+                    id="message-input"
                     class="text-input message-input"
                     placeholder="Enter Message"
+                    name="Message"
                   ></textarea>
                 </div>
-                <div class="btn-light" id="submit-btn">
+                <button class="btn-light" id="submit-btn" type="submit">
                   <p>SUBMIT</p>
-                </div>
+                </button>
               </form>
               <div class="mail-icon-box">
                 <div class="image-ring">
