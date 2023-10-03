@@ -65,7 +65,7 @@ export const toggleOrb = (orbPosition) => {
 };
 
 // Load listeners for all pages
-export const loadListeners = () => {
+export const loadListeners = (e) => {
   //Load universal elements
   const navbar = document.querySelector('#navbar');
   const navButton = document.querySelector('#nav-btn');
@@ -142,8 +142,8 @@ export const loadListeners = () => {
 };
 
 export const formListner = () => {
+  console.log('called');
   const submitButton = document.querySelector('#submit-btn');
-
   const confirmMessage = document.querySelector('.confirm-message');
   const imageBack = document.querySelector('#mail-icon-glow');
 
