@@ -4,7 +4,8 @@
   "description": "Web Dev Portfolio Site for Greg Gaines",
   "main": "index.js",
   "scripts": {
-    "sass": "node-sass -w scss/ -o dist/css --recursive"
+    "sass": "node-sass -w scss/ -o dist/css --recursive",
+    "deploy": "git subtree push --prefix dist origin gh-pages"
   },
   "author": "Greg Gaines",
   "license": "ISC",

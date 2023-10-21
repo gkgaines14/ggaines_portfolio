@@ -39,7 +39,6 @@ export const setTheme = (themeSetting, orbPosition) => {
 
 // Setting orb position on-load
 export const setOrb = (orbPosition) => {
-  console.log(orbPosition);
   if (orbPosition === 'left') {
     orb.style.transform = '';
     orb.style.right = '';
@@ -99,7 +98,6 @@ export const loadListeners = (e) => {
   document.addEventListener('scroll', (e) => {
     if (window.scrollY != 0) {
       header.classList.add('header-border');
-      console.log(window.scrollY);
     } else {
       header.classList.remove('header-border');
     }

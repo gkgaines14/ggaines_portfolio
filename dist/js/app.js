@@ -36,7 +36,7 @@ const launchAbout = (page) => {
     setOrb(localStorage.getItem('toggle'));
     setTheme(localStorage.getItem('theme'));
     loadListeners();
-    console.log('Home page loaded');
+    console.log('About page loaded');
   };
 
   const header = document.querySelector('#header');
@@ -53,7 +53,7 @@ const launchWork = (page) => {
     setOrb(localStorage.getItem('toggle'));
     setTheme(localStorage.getItem('theme'));
     loadListeners();
-    console.log('Home page loaded');
+    console.log('Work page loaded');
   };
 
   const allTab = document.querySelector('#p-all');
@@ -146,7 +146,7 @@ const launchContact = (page) => {
     setTheme(localStorage.getItem('theme'));
     loadListeners();
     formListner();
-    console.log('Home page loaded');
+    console.log('Contact page loaded');
   };
 };
 
@@ -157,23 +157,18 @@ const pageManager = {
     let page = document.body.id;
     switch (page) {
       case 'home':
-        console.log(page);
         launchHome(page);
         break;
       case 'work':
-        console.log(page);
         launchWork(page);
         break;
       case 'about':
-        console.log(page);
         launchAbout(page);
         break;
       case 'contact':
-        console.log(page);
         launchContact(page);
         break;
       default:
-      // launchHome(page);
     }
   },
 };
