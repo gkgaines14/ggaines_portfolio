@@ -384,6 +384,9 @@ a {
                 position: absolute;
                 top: 5px;
                 left: 2px; }
+            #home-special #skills .skills-list .skills-group .skill-item .skill-icon #tailwind {
+              width: 20px;
+              height: 20px; }
             #home-special #skills .skills-list .skills-group .skill-item .skill-icon i {
               color: #131830; }
           #home-special #skills .skills-list .skills-group .skill-item .skill-name {
